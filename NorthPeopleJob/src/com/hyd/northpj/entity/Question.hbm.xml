@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hyd.northpj.entity.Question" table="t_question">
+		<id name="sn" column="sn" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="id" column="id" />
+		<property name="question" column="question" />
+		<property name="type" column="type" />
+		<property name="activationA" column="activationA" />
+		<property name="choiceA" column="choiceA" />
+		<property name="gotoA" column="gotoA" />
+		<property name="scoreA" column="scoreA" />
+		<property name="objectiveA" column="objectiveA" />
+		<property name="fileA" column="fileA" />
+		<property name="departmentA" column="departmentA" />
+		<property name="hintA" column="hintA" />
+		<property name="activationB" column="activationB" />
+		<property name="choiceB" column="choiceB" />
+		<property name="gotoB" column="gotoB" />
+		<property name="scoreB" column="scoreB" />
+		<property name="objectiveB" column="objectiveB" />
+		<property name="fileB" column="fileB" />
+		<property name="departmentB" column="departmentB" />
+		<property name="hintB" column="hintB" />
+		<property name="activationC" column="activationC" />
+		<property name="choiceC" column="choiceC" />
+		<property name="gotoC" column="gotoC" />
+		<property name="scoreC" column="scoreC" />
+		<property name="objectiveC" column="objectiveC" />
+		<property name="fileC" column="fileC" />
+		<property name="departmentC" column="departmentC" />
+		<property name="hintC" column="hintC" />
+		<property name="activationD" column="activationD" />
+		<property name="choiceD" column="choiceD" />
+		<property name="gotoD" column="gotoD" />
+		<property name="scoreD" column="scoreD" />
+		<property name="objectiveD" column="objectiveD" />
+		<property name="fileD" column="fileD" />
+		<property name="departmentD" column="departmentD" />
+		<property name="hintD" column="hintD" />
+		<property name="activationE" column="activationE" />
+		<property name="choiceE" column="choiceE" />
+		<property name="gotoE" column="gotoE" />
+		<property name="scoreE" column="scoreE" />
+		<property name="objectiveE" column="objectiveE" />
+		<property name="fileE" column="fileE" />
+		<property name="departmentE" column="departmentE" />
+		<property name="hintE" column="hintE" />
+		<property name="activationF" column="activationF" />
+		<property name="choiceF" column="choiceF" />
+		<property name="gotoF" column="gotoF" />
+		<property name="scoreF" column="scoreF" />
+		<property name="departmentF" column="departmentF" />
+		<property name="objectiveF" column="objectiveF" />
+		<property name="fileF" column="fileF" />
+		<property name="hintF" column="hintF" />
+	</class>
+</hibernate-mapping>
+  

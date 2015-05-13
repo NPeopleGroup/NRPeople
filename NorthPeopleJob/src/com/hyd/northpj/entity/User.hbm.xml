@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+    "hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hyd.northpj.entity.User" table="t_user">
+		<id name="sn" column="sn" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="username" column="username" />
+		<property name="password" column="password" />
+		<property name="type" column="type" />
+		<property name="cardID" column="cardID" />
+		<property name="name" column="name" />
+		<property name="sex" column="sex" />
+		<property name="nationality" column="nationality" />
+		<property name="birth" column="birth" />
+		<property name="political" column="political" />
+		<property name="marriage" column="marriage" />
+		<property name="education" column="education" />
+		<property name="degree" column="degree" />
+		<property name="major" column="major" />
+		<property name="qualification" column="qualification" />
+		<property name="workTypes" column="workTypes" />
+		<property name="fromProvincial" column="fromProvincial" />
+		<property name="fromCity" column="fromCity" />
+		<property name="fromDistrict" column="fromDistrict" />
+		<property name="fromAddress" column="fromAddress" />
+		<property name="fromProperty" column="fromProperty" />
+		<property name="fromOrgan" column="fromOrgan" />
+		<property name="toOrgan" column="toOrgan" />
+		<property name="toPolicestation" column="toPolicestation" />
+		<property name="toAddress" column="toAddress" />
+		<property name="toDistrict" column="toDistrict" />
+		<property name="companyName" column="companyName" />
+		<property name="companyTelephone" column="companyTelephone" />
+		<property name="companyAddress" column="companyAddress" />
+		<property name="phone" column="phone" />
+		<property name="hasSocialsecurity" column="hasSocialsecurity" />
+		<property name="hasDetention" column="hasDetention" />
+		<property name="hasCriminal" column="hasCriminal" />
+		<property name="residencePermitDate" column="residencePermitDate" />
+		<property name="relation1" column="relation1" />
+		<property name="relationName1" column="relationName1" />
+		<property name="relationIDCard1" column="relationIDCard1" />
+		<property name="relationdegree1" column="relationdegree1" />
+		<property name="relation2" column="relation2" />
+		<property name="relationName2" column="relationName2" />
+		<property name="relationIDCard2" column="relationIDCard2" />
+		<property name="relationdegree2" column="relationdegree2" />
+		<property name="relation3" column="relation3" />
+		<property name="relationName3" column="relationName3" />
+		<property name="relationIDCard3" column="relationIDCard3" />
+		<property name="relationdegree3" column="relationdegree3" />
+		<property name="relation4" column="relation4" />
+		<property name="relationName4" column="relationName4" />
+		<property name="relationIDCard4" column="relationIDCard4" />
+		<property name="relationdegree4" column="relationdegree4" />
+		<property name="relation5" column="relation5" />
+		<property name="relationName5" column="relationName5" />
+		<property name="relationIDCard5" column="relationIDCard5" />
+		<property name="relationdegree5" column="relationdegree5" />
+		<property name="relation6" column="relation6" />
+		<property name="relationName6" column="relationName6" />
+		<property name="relationIDCard6" column="relationIDCard6" />
+		<property name="relationdegree6" column="relationdegree6" />
+		<property name="acceptionProgress" column="acceptionProgress" />
+		<property name="applicationTime" column="applicationTime" />
+		<property name="appointmentTime" column="appointmentTime" />
+	</class>
+</hibernate-mapping>
+  

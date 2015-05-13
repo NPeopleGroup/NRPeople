@@ -1,0 +1,152 @@
+*{margin:0;padding:0}
+h1,h2,h3,h4,h5{
+	padding:0;
+	margin:0;
+	font-weight:normal
+	}
+	@-webkit-keyframes leftSlideIn{0%{-webkit-transform:translate3d(-1000px, 0, 0)}100%{-webkit-transform:translate3d(0, 0, 0)}}
+	@keyframes leftSlideIn{0%{transform:translate3d(-1000px, 0, 0)}100%{transform:translate3d(0, 0, 0)}}
+	@-webkit-keyframes rightSlideIn{0%{-webkit-transform:translate3d(1000px, 0, 0)}100%{-webkit-transform:translate3d(0, 0, 0)}}@keyframes rightSlideIn{0%{transform:translate3d(1000px, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@-webkit-keyframes leftSlideOut{0%{-webkit-transform:translate3d(0, 0, 0)}100%{-webkit-transform:translate3d(-1000px, 0, 0)}}@keyframes leftSlideOut{0%{transform:translate3d(0, 0, 0)}100%{transform:translate3d(-1000px, 0, 0)}}@-webkit-keyframes rightSlideOut{0%{-webkit-transform:translate3d(0, 0, 0)}100%{-webkit-transform:translate3d(1000px, 0, 0)}}@keyframes rightSlideOut{0%{transform:translate3d(0, 0, 0)}100%{transform:translate3d(1000px, 0, 0)}}
+	.play{
+		display:inline-block;
+		width:24px;
+		height:24px;
+		margin-right:8px;
+		vertical-align:-6px;
+		background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/icon-play-3.png") no-repeat 0 0
+		}
+	.minote-design{
+		-webkit-font-smoothing:antialiased
+	}
+	.minote-design .section{
+		overflow:hidden
+		}
+	.minote-design .section h2{
+		color:#212121;
+		font-size:40px;
+		line-height:1.35;
+		z-index:9;
+		position:relative
+		}
+	.minote-design .section h3{
+		color:#757575;
+		font-size:24px;
+		padding-top:10px;
+		padding-bottom:10px
+		}
+	.minote-design .section p.msg{
+		color:#424242;
+		font-size:16px;
+		padding-top:15px;
+		line-height:1.875
+		}
+	.minote-design .section a.link{
+		color:#ff3d00;
+		font-size:16px;
+		display:block;
+		padding-top:30px;line-height:24px
+		}
+	.minote-design .section01{
+		text-align:center;
+		height:891px;
+		overflow:hidden
+		}
+	.minote-design .section01 .text{
+		margin-left:0;
+		position:relative
+		}
+	.minote-design .section01 .text .imgList{
+		background:url("./images/introduction.png") no-repeat top center;
+		height:780px;
+		width:1903px;
+		position:absolute;
+		left:50%;
+		margin-left:-951.5px;
+		top:450px;
+		z-index:9;
+		-webkit-transform:translate3d(0, 400px, 0);
+		transform:translate3d(0, 400px, 0);
+		transition:transform 1s;
+		-webkit-transition:-webkit-transform 1s
+		}
+	/*.minote-design .section01 .text a:hover .play{
+		background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/icon-play-3.png") no-repeat 0 -24px
+		}*/
+	.minote-design .section01 h1{
+		color:#212121;
+		font-size:72px;
+		padding-top:83px;
+		}
+	.minote-design .section01 p{
+		width:740px;
+		margin:0 auto
+		}
+	.minote-design .section01 .container{
+		height:1232px
+		}
+	.minote-design .section01 .container a.link{
+		position:relative;
+		display:inline-block;
+		z-index:99;
+		width:auto;
+		cursor:pointer
+		}
+	.minote-design .section01.xm-visible-section .text .imgList{
+		-webkit-transform:translate3d(0, 0, 0);
+		transform:translate3d(0, 0, 0);
+		transition:transform 1s;
+		-webkit-transition:-webkit-transform 1s
+		}
+	.minote-design .section02{text-align:center;height:950px}
+	.minote-design .section02 .text{margin-left:0;padding-top:112px;width:624px;margin:0 auto}
+	.minote-design .section02 .text .imgList{
+		background:url("./images/hailiang.png") no-repeat  center;
+		height:780px;
+		width:1903px;
+		left:50%;
+		margin-left:-951.5px;
+		top:450px;
+		z-index:9;
+		-webkit-transform:translate3d(0, 400px, 0);
+		transform:translate3d(0, 400px, 0);
+		transition:transform 1s;
+		-webkit-transition:-webkit-transform 1s
+
+	}
+	
+	.minote-design .section03{
+		text-align:center;
+		height:735px;
+		background:#ffffff
+		}
+	.minote-design .section03 .text{
+		margin-left:0;
+		width:812px;
+		margin:0 auto
+		}
+	.minote-design .section03 ul{
+		width:808px;
+		margin:65px auto 0 auto;
+		overflow:hidden
+		}
+	.minote-design .section03 ul li{
+		width:216px;
+		list-style:none;
+		float:left;
+		text-align:center;
+		margin-right:80px
+		}
+	.minote-design .section03 ul li p{
+		color:#212121;
+		padding-top:25px
+		}
+	.minote-design .section03 ul li .list{
+		width:216px;
+		height:216px
+		}
+	.minote-design .section03 ul li .listaimg{
+		background:url no-repeat top left}.minote-design .section03 ul li .listbimg{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-listb.jpg") no-repeat top left
+	}
+		.minote-design .section03 ul li .listcimg{
+			background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-lista.jpg?") no-repeat top left}.minote-design .section03 ul li.last{margin-right:0}.minote-design .section04{height:805px;overflow:hidden}.minote-design .section04 .container .text{position:relative;height:805px}.minote-design .section04 .container .text .imgList{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-bg04.png") no-repeat top left;height:1442px;width:1000px;position:absolute;left:-268px;top:30px;opacity:0;-webkit-transform:translate3d(-300px, 0, 0);transform:translate3d(-300px, 0, 0);-webkit-transition:-webkit-transform 2s,opacity 2s;transition:transform 2s,opacity 2s}.minote-design .section04 .part-content{padding:397px 0 0 676px}.minote-design .section04 .part-content p.msg{width:480px}.minote-design .section04.xm-visible-section .text .imgList{opacity:1;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}.minote-design .section05{height:757px;background:#f5f5f5}.minote-design .section05 .container .text{position:relative;height:757px}.minote-design .section05 .container .text .imgList{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-bg05.jpg") no-repeat top left;height:66px;width:1616px;position:absolute;left:-566px;top:511px;-webkit-transform:translate3d(-900px, 0, 0);transform:translate3d(-900px, 0, 0);transition:transform 2s;-webkit-transition:-webkit-transform 2s}.minote-design .section05 .container .text .word-content{position:absolute;left:1076px;top:509px;line-height:64px;*border-bottom:1px solid #dcdcdc;*border-top:1px solid #dcdcdc;width:166px;text-align:center}.minote-design .section05 .container .text .word-content:before,.minote-design .section05 .container .text .word-content:after{position:absolute;left:0;width:166px;height:1px;background:#dcdcdc;content:'';opacity:0;-webkit-transition:-webkit-transform 1s .7s,opacity 1s .7s;transition:transform 1s .7s,opacity 1s .7s}.minote-design .section05 .container .text .word-content:before{top:0;-webkit-transform:translate3d(0, -180px, 0);transform:translate3d(0, -180px, 0)}.minote-design .section05 .container .text .word-content:after{bottom:0;-webkit-transform:translate3d(0, 180px, 0);transform:translate3d(0, 180px, 0)}.minote-design .section05 .container .text .word-content .c{opacity:0;-webkit-transition:opacity 1s 1.7s;transition:opacity 1s 1.7s}.minote-design .section05 .container .text .word-content .num{font-size:30px}.minote-design .section05 .part-content{padding:155px 0 0 62px;width:660px}.minote-design .section05.xm-visible-section .text .imgList{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}.minote-design .section05.xm-visible-section .text .word-content:before,.minote-design .section05.xm-visible-section .text .word-content:after{opacity:1;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}.minote-design .section05.xm-visible-section .text .word-content.minote-design-word-content{opacity:1}.minote-design .section05.xm-visible-section .text .word-content .c{opacity:1}.minote-design .section06{height:864px;background:#fff;overflow:hidden}.minote-design .section06 .container .text{position:relative;height:875px}.minote-design .section06 .container .text .imgList{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-bg06.jpg") no-repeat top left;height:623px;width:1698px;position:absolute;left:150px;top:-198px;z-index:999;-webkit-transform:translate3d(0, -300px, 0);transform:translate3d(0, -300px, 0);transition:transform 1s;-webkit-transition:-webkit-transform 1s}.minote-design .section06 .part-content{padding:500px 0 0 62px;z-index:9999;position:relative;width:558px}.minote-design .section06.xm-visible-section .text .imgList{-webkit-transform:translate3d(0, 50px, 0);transform:translate3d(0, 50px, 0)}.minote-design .section07{height:875px;background:#f5f5f5;overflow:hidden}.minote-design .section07 .container .text{position:relative;height:875px}.minote-design .section07 .container .text .imgList{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-bg07.jpg") no-repeat top left;height:900px;width:1875px;position:absolute;left:-181px;top:0;z-index:999}.minote-design .section07 .part-content{padding:120px 0 0 826px;z-index:9999;position:relative}.minote-design .section08{height:880px;background:#fff;overflow:hidden}.minote-design .section08 .container .text{position:relative;height:850px}.minote-design .section08 .container .text .part-content{width:680px}.minote-design .section08 .container .text .imgList{position:absolute;z-index:999;width:1240px}.minote-design .section08 .container .text .imgList .left{position:absolute;left:30px;top:10px;width:725px;height:444px}.minote-design .section08 .container .text .imgList .right{position:absolute;right:0;top:127px;width:760px;height:495px}.minote-design .section08 .container .text .imgList .w,.minote-design .section08 .container .text .imgList .b,.minote-design .section08 .container .text .imgList .g,.minote-design .section08 .container .text .imgList .bamboo,.minote-design .section08 .container .text .imgList .ns{display:none}.minote-design .section08 .container .text .imgList .active{display:block}.minote-design .section08 .container .text .imgList .active-intro .left{-webkit-animation:leftSlideIn 1.5s 1 forwards;animation:leftSlideIn 1.5s 1 forwards}.minote-design .section08 .container .text .imgList .active-intro .right{-webkit-animation:rightSlideIn 1.5s 1 forwards;animation:rightSlideIn 1.5s 1 forwards}.minote-design .section08 .container .text .imgList .active-outro .left{-webkit-animation:leftSlideOut .5s 1 forwards;animation:leftSlideOut .5s 1 forwards}.minote-design .section08 .container .text .imgList .active-outro .right{-webkit-animation:rightSlideOut .5s 1 forwards;animation:rightSlideOut .5s 1 forwards}.minote-design .section08 .container .text .imgList .w-l{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-w-l.png") no-repeat top left}.minote-design .section08 .container .text .imgList .w-r{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-w-r.png") no-repeat top left}.minote-design .section08 .container .text .imgList .b-l{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-b-l.png") no-repeat top left}.minote-design .section08 .container .text .imgList .b-r{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-b-r.png") no-repeat top left}.minote-design .section08 .container .text .imgList .g-l{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-g-l.png") no-repeat top left}.minote-design .section08 .container .text .imgList .g-r{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-g-r.png") no-repeat top left}.minote-design .section08 .container .text .imgList .bamboo-l{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-bamboo-l.jpg") no-repeat top left}.minote-design .section08 .container .text .imgList .bamboo-r{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-bamboo-r.png") no-repeat top left}.minote-design .section08 .container .text .imgList .ns-l{background:url("http://c1.mifile.cn/f/i/2014/cn/minote-ns/minote-design-8-nv-l.jpg") no-repeat top left}.minote-design .section08 .container .text .imgList .ns-r{background:url("http://c1.mifile.cn/f/i/2014/cn/minote-ns/minote-design-8-nv-r.png") no-repeat top left}.minote-design .section08 .part-content{padding:98px 0 0 62px;z-index:9999;position:relative}.minote-design .section08 ul.tab{width:460px;height:70px;position:absolute;top:95px;right:0;cursor:pointer;z-index:99}.minote-design .section08 ul.tab li{list-style:none;cursor:pointer;height:70px;width:65px;margin-right:25px;float:left;_display:inline;overflow:hidden}.minote-design .section08 ul.tab li:hover{cursor:pointer}.minote-design .section08 ul.tab li.w{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab.png") no-repeat 0 0}.minote-design .section08 ul.tab li.w.checked{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-check.jpg") no-repeat 0 0}.minote-design .section08 ul.tab li.b{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab.png") no-repeat -90px 0}.minote-design .section08 ul.tab li.b.checked{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-check.jpg") no-repeat -90px 0}.minote-design .section08 ul.tab li.g{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab.png") no-repeat -180px 0}.minote-design .section08 ul.tab li.g.checked{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-check.jpg") no-repeat -180px 0}.minote-design .section08 ul.tab .bamboo{width:70px;background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-bamboo.jpg") no-repeat 0 0}.minote-design .section08 ul.tab .bamboo.checked{background-position:0 -70px}.minote-design .section08 ul.tab li.ns{background:url("http://c1.mifile.cn/f/i/2014/cn/minote-ns/minote-design-tab-ns.jpg") no-repeat 0 0}.minote-design .section08 ul.tab li.ns.checked{background-position:0 -78px}.minote-design .section09{background-color:#f5f5f5}.minote-design .section09 .container{height:300px;position:relative}.minote-design .section09 .con{top:80px;left:186px;position:absolute}.minote-design .section09 .con .title{color:#ff3d00;font-size:36px}.minote-design .section09 .con p.msg{width:410px}@media (min-width:1660px){.minote-design .section01{height:1189px；background-color:#ffffff}.minote-design .section04{height:904px}.minote-design .section04 .container .text{height:904px}.minote-design .section04 .container .text .imgList{left:-196px}.minote-design .section04 .part-content{padding:312px 0 0 918px;width:558px}.minote-design .section05 .container .text .imgList{left:-386px}.minote-design .section05 .container .text .part-content{padding:144px 0 0 119px}.minote-design .section05 .container .text .word-content{left:1252px}.minote-design .section06 .part-content{padding:485px 0 0 119px;width:640px}.minote-design .section06 .container .text .imgList{left:413px;top:-101px}.minote-design .section07{height:903px}.minote-design .section07 .container .text{position:relative;height:902px}.minote-design .section07 .container .text .imgList{left:77px}.minote-design .section07 .part-content{padding:120px 0 0 1105px}.minote-design .section08{height:971px}.minote-design .section08 ul.tab{right:70px}.minote-design .section08 .container .text .imgList{width:1600px}.minote-design .section08 .container .text .imgList .imgtypelist{transform:scale(1.2);-ms-transform:scale(1.2);-webkit-transform:scale(1.2);-o-transform:scale(1.2);-moz-transform:scale(1.2)}.minote-design .section08 .container .text .imgList .left{left:110px;top:80px}.minote-design .section08 .container .text .imgList .right{right:320px;top:220px}.minote-design .section08 .container .text .part-content{padding:93px 0 0 115px}}@media (max-width:1260px){.minote-design .section p.msg{font-size:14px}.minote-design .section h2{font-size:30px}.minote-design .section01{text-align:center;overflow:hidden;height:698px;background-color:#ffffff}.minote-design .section01 .text{padding-left:62px;width:310px}.minote-design .section01 .text .imgList{background:url() no-repeat top center;position:absolute;left:683px;z-index:9;top:10px;-webkit-transform:translate3d(0, 400px, 0);transform:translate3d(0, 400px, 0);transition:transform 1s;-webkit-transition:-webkit-transform 1s}
+			.minote-design .section01 .text h1{font-size:60px;width:360px;line-height:1.2;padding-top:106px}.minote-design .section01 .text p{width:310px}.minote-design .section02{height:737px}.minote-design .section02 .text{padding-top:76px;width:617px;margin:0 auto}.minote-design .section02 .text ul li{width:1240px}.minote-design .section02 .text ul li.imga{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-imga-s.png") no-repeat top center;margin-top:0}.minote-design .section02 .text ul li.imgb{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-imgb-s.png") no-repeat top center;margin-top:0}.minote-design .section02 .text ul li.imgc{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-imgc-s.png") no-repeat top center;margin-top:0}.minote-design .section03{height:617px}.minote-design .section03 .text{width:710px;margin:0 auto}.minote-design .section03 ul{width:748px;margin:65px auto 0 auto;overflow:hidden}.minote-design .section03 ul li{width:216px;list-style:none;float:left;text-align:center;margin-right:50px}.minote-design .section03 ul li p{color:#212121;padding-top:0}.minote-design .section03 ul li .list{width:216px;height:200px}.minote-design .section03 ul li .listaimg{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-lista-s.jpg") no-repeat top center}.minote-design .section03 ul li .listbimg{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-listb-s.jpg") no-repeat top center}.minote-design .section03 ul li .listcimg{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-listc-s.jpg") no-repeat top center}.minote-design .section03 ul li.last{margin-right:0}.minote-design .section h3{font-size:20px;padding-top:5px}.minote-design .section p{padding-top:5px}.minote-design .section04{height:704px}.minote-design .section04 .container .text{height:704px}.minote-design .section04 .container .text .imgList{left:-100px;top:24px;background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-bg04-s.jpg") no-repeat top left;z-index:8}.minote-design .section04 .container .text .part-content{padding:369px 0 0 535px;position:relative;z-index:999}.minote-design .section04 .container .text .part-content p.msg{width:380px}.minote-design .section05{height:593px}.minote-design .section05 .container .text .imgList{left:-812px;top:404px}.minote-design .section05 .container .text .word-content{left:828px;top:399px}.minote-design .section05 .part-content{padding:113px 0 0 62px;width:450px}.minote-design .section06{height:630px;background:#fff;overflow:hidden}.minote-design .section06 .container .text{position:relative;height:630px}.minote-design .section06 .container .text .imgList{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-bg06-s.jpg") no-repeat top left;height:671px;width:1698px;position:absolute;left:0;top:-236px}.minote-design .section06 .part-content{padding:283px 0 0 60px;width:355px}.minote-design .section07{height:630px}.minote-design .section07 .container .text{position:relative;height:902px}.minote-design .section07 .container .text .imgList{left:32px;background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-bg07-s.jpg") no-repeat top left}.minote-design .section07 .part-content{padding:120px 0 0 505px}.minote-design .section08{height:722px}.minote-design .section08 .part-content{padding:70px 0 0 62px}.minote-design .section08 p{font-size:16px}.minote-design .section08 ul.tab{right:-38px;top:70px;width:210px}.minote-design .section08 ul.tab li{list-style:none;cursor:pointer;height:52px;width:48px;margin-right:19px;float:left;overflow:hidden}.minote-design .section08 ul.tab li:hover{cursor:pointer}.minote-design .section08 ul.tab li.w{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-s.jpg") no-repeat 0 0}.minote-design .section08 ul.tab li.w.checked{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-check-s.jpg") no-repeat 0 0}.minote-design .section08 ul.tab li.b{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-s.jpg") no-repeat -66px 0}.minote-design .section08 ul.tab li.b.checked{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-check-s.jpg") no-repeat -66px 0}.minote-design .section08 ul.tab li.g{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-s.jpg") no-repeat -130px 0}.minote-design .section08 ul.tab li.g.checked{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-tab-check-s.jpg") no-repeat -130px 0}.minote-design .section08 .container .text{position:relative;height:850px}.minote-design .section08 .container .text .part-content{width:600px}.minote-design .section08 .container .text .imgList{position:absolute;z-index:999;width:1240px}.minote-design .section08 .container .text .imgList .left{position:absolute;left:30px;top:10px;width:725px;height:444px}.minote-design .section08 .container .text .imgList .right{position:absolute;right:116px;top:127px;width:760px;height:495px}.minote-design .section08 .container .text .imgList .w-l{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-w-l-s.png") no-repeat top left}.minote-design .section08 .container .text .imgList .w-r{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-w-r-s.png") no-repeat top left}.minote-design .section08 .container .text .imgList .b-l{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-b-l-s.png") no-repeat top left}.minote-design .section08 .container .text .imgList .b-r{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-b-r-s.png") no-repeat top left}.minote-design .section08 .container .text .imgList .g-l{background:url("http://c1.mifile.cn/f/i/2014/cn/goods/minote/design/minote-design-8-g-l-s.png") no-repeat top left}.minote-design .section08 .container .text .imgList .g-r{background:url("css/images/introduction.png") no-repeat top left}}

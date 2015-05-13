@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+    "hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+		<class name="com.hyd.northpj.entity.AdminUser" table="t_admin_user">
+		<id name="sn" column="sn" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="username" column="username" />
+		<property name="password" column="password" />
+		<property name="type" column="type" />
+		<property name="name" column="name" />
+	</class>
+</hibernate-mapping>
+  

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="actions" extends="struts-default" namespace="/">
+		<action name="RegisterAction" class="com.hyd.northpj.action.RegisterAction">
+			<result name="success">index.jsp
+			</result>
+			<result name="input">index.jsp
+			</result>
+		</action>
+		<action name="LoginAction" class="com.hyd.northpj.action.LoginAction">
+			<result name="success">index.jsp
+			</result>
+			<result name="input">index.jsp
+			</result>
+		</action>
+		<!-- 此处需要修改 -->
+		<action name="AdminLoginAction" class="com.hyd.northpj.action.AdminLoginAction">
+			<result name="success">question.jsp
+			</result>
+			<result name="input">help.jsp
+			</result>
+		</action>
+		<action name="adminManager">
+			<result name="success">/WEB-INF/admin/view_question_list.jsp</result>
+		</action>
+		<!-- <action name="admin_view_*"> <result name="success">/WEB-INF/admin/admin_view_{1}.jsp</result> 
+			</action> -->
+		<action name="admin">
+			<result name="success">/WEB-INF/admin/admin_login.jsp</result>
+		</action>
+		<action name="viewQuestions" class="com.hyd.northpj.action.ViewQuestionListAction">
+			<result name="success">/WEB-INF/admin/view_question_list.jsp</result>
+		</action>
+		<action name="admin_view_users" class="com.hyd.northpj.action.ViewUserListAction">
+			<result name="success">/WEB-INF/admin/admin_view_users.jsp</result>
+		</action>
+	</package>
+</struts>

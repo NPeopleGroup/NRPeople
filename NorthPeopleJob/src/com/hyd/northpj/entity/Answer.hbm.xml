@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+    "hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hyd.northpj.entity.Answer" table="t_answer">
+		<id name="sn" column="sn" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="username" column="username" />
+		<property name="questionId" column="questionid" />
+		<property name="answer" column="answer" />		
+	</class>
+</hibernate-mapping>
+  
