@@ -4,7 +4,7 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<package name="actions" extends="struts-default" namespace="/">
+	<package name="actions" extends="struts-default,json-default" namespace="/">
 		<action name="RegisterAction" class="com.hyd.northpj.action.RegisterAction">
 			<result name="success">index.jsp
 			</result>
@@ -37,6 +37,10 @@
 		</action>
 		<action name="admin_view_users" class="com.hyd.northpj.action.ViewUserListAction">
 			<result name="success">/WEB-INF/admin/admin_view_users.jsp</result>
+		</action>
+		<action name="printAction" class="com.hyd.northpj.action.PrintAction">
+			<result type="json">
+			</result>
 		</action>
 	</package>
 </struts>
