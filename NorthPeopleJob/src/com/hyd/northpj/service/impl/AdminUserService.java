@@ -1,9 +1,13 @@
 package com.hyd.northpj.service.impl;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import com.hyd.northpj.dao.impl.AdminUserDao;
+import com.hyd.northpj.dao.impl.UserDao;
 import com.hyd.northpj.entity.AdminUser;
+import com.hyd.northpj.entity.User;
 import com.hyd.northpj.service.interfaces.AdminUserServiceInterface;
 import com.hyd.northpj.util.ValidateUtil;
 
@@ -106,6 +110,14 @@ public class AdminUserService implements AdminUserServiceInterface {
 		return null;
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public List<User> getNormalUserList() throws Exception {
+		// TODO Auto-generated method stub
+		UserDao myUserDao=new UserDao();
+		List<User> myUserList=myUserDao.selectAllUser();
+		return myUserList;
 	}
 
 }

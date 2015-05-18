@@ -1,8 +1,12 @@
 package com.hyd.northpj.action;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import com.hyd.northpj.dao.impl.UserDao;
 import com.hyd.northpj.entity.AdminUser;
+import com.hyd.northpj.entity.User;
+import com.hyd.northpj.service.impl.AdminUserService;
 import com.hyd.northpj.util.CommonUtil;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -13,7 +17,7 @@ public class PrintAction extends ActionSupport{
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("******");
+	/*	System.out.println("******");
 		AdminUser adminUser1=new AdminUser();
 		adminUser1.setName("name");
 		adminUser1.setSn(1);
@@ -28,8 +32,10 @@ public class PrintAction extends ActionSupport{
 		adminUser2.setUsername("userName2");
 		ArrayList<AdminUser> myAdminUserList=new ArrayList<AdminUser>();
 		myAdminUserList.add(adminUser1);
-		myAdminUserList.add(adminUser2);
-		CommonUtil.toBeJson(myAdminUserList, myAdminUserList.size());
+		myAdminUserList.add(adminUser2);*/
+		AdminUserService myAdminUserService=new AdminUserService();
+		List<User> myUserList=myAdminUserService.getNormalUserList();
+		CommonUtil.toBeJson(myUserList, myUserList.size());
 		
 		return null;
 	}

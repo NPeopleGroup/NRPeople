@@ -1,5 +1,7 @@
 package com.hyd.northpj.dao.interfaces;
 
+import java.util.List;
+
 import com.hyd.northpj.entity.User;
 
 public interface UserDaoInterface {
@@ -137,4 +139,10 @@ public interface UserDaoInterface {
 	// */
 	// public ArrayList<User> getUsersByProgress(String progress) throws
 	// Exception;
+	/**
+	 * 获取所有用户
+	 * @return 如果成功返回0，失败则返回非0
+	 * @throws Exception
+	 */
+	public List<User> selectAllUser() throws Exception;
 }

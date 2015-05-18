@@ -1,6 +1,9 @@
 package com.hyd.northpj.service.interfaces;
 
+import java.util.List;
+
 import com.hyd.northpj.entity.AdminUser;
+import com.hyd.northpj.entity.User;
 
 public interface AdminUserServiceInterface {
 	/**
@@ -47,5 +50,6 @@ public interface AdminUserServiceInterface {
 	 * @throws Exception
 	 */
 	public AdminUser getAdminUserInformation(String username) throws Exception;
-
+	
+	public List<User> getNormalUserList() throws Exception;
 }

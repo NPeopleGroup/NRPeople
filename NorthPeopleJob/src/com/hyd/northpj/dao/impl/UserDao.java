@@ -106,12 +106,22 @@ public class UserDao implements UserDaoInterface {
 		return 0;
 	}
 
-	//public static void main(String[] args) throws Exception{
-		//UserDao ud=new UserDao();
-		//User u=new User();
-		//u=ud.selectUserInformation("13752142003");
-		//System.out.print(u.getPassword());
-	//}
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<User> selectAllUser() throws Exception {
+		// TODO Auto-generated method stub
+		String sqlStatement="from User";
+		query=session.createQuery(sqlStatement);
+		List<User> myUserList=query.list();
+		return myUserList;
+	}
+
+/*	public static void main(String[] args) throws Exception{
+		UserDao ud=new UserDao();
+		User u=new User();
+		u=ud.selectUserInformation("13752142003");
+		System.out.print(u.getPassword());
+	}*/
 
 }
 
