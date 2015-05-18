@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -42,12 +42,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             {
                 dataType: "json",
                 dataFields: [
+                    { name: 'sn', type: 'string' },
                     { name: 'username', type: 'string' },
                     { name: 'password', type: 'string' },
                     { name: 'type', type: 'string' },
                     { name: 'name', type: 'string' },
                 ],
                 id: 'id',
+                pageable: true,
+                pagerPosition: 'both',
                 url: url
             };
 
@@ -55,22 +58,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
             $("#dataTable").jqxDataTable(
             {
-                width: 850,
+                width: 725,
                 pageable: true,
                 pagerButtonsCount: 10,
                 source: dataAdapter,
                 columnsResize: true,
                 columns: [
-                  { text: 'UserName', dataField: 'username', width: 300 },
-                  { text: 'User Password', dataField: 'password', width: 300 },
+                  { text: 'Id', dataField: 'sn', width: 20 }, 
+                  { text: 'UserName', dataField: 'username', width: 200 },
+                  { text: 'User Password', dataField: 'password', width: 200 },
                   { text: 'Type', dataField: 'type', width: 180 },
                   { text: 'Name', dataField: 'name', width: 120 }
               ]
             });
+            $("#dataTable").jqxDataTable({pagerMode:"advanced"});
+            $("#myQueryButton").jqxButton({ height: 25});
+            $("#myEditButton").jqxButton({ height: 25});
         });
     </script>
 </head>
 <body class='default'>
      <div id="dataTable"></div>
+     <div id="myMenu" style="margin-top:20px">
+        <button id="myQueryButton">查询</button>
+        <button id="myEditButton">编辑</button>
+     </div>
 </body>
 </html>
