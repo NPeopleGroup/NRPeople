@@ -18,21 +18,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	 <link rel="stylesheet" href="<%=basePath%>/js/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="<%=basePath%>/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxdata.js"></script> 
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxlistbox.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxdropdownlist.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxdatatable.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxpanel.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxradiobutton.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxinput.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/jqwidgets/jqxnotification.js"></script>
+	 <link rel="stylesheet" href="<%=basePath%>js/jqwidgets/styles/jqx.base.css" type="text/css" />
+	 <link rel="stylesheet" type="text/css" href="<%=basePath%>css/bootstrap/bootstrap.min.css">
+    <script type="text/javascript" src="<%=basePath%>js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxdata.js"></script> 
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxdatatable.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxradiobutton.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/jqwidgets/jqxnotification.js"></script>
     <script type="text/javascript" src="<%=basePath%>js/generatedata.js"></script>
-    <script type="text/javascript" src="<%=basePath%>/js/demos.js"></script>
+    <script type="text/javascript" src="<%=basePath%>js/demos.js"></script>
    <script type="text/javascript">
         $(document).ready(function () {
             var url = "<%=basePath%>/printAction";
@@ -63,6 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 pagerButtonsCount: 10,
                 source: dataAdapter,
                 columnsResize: true,
+                selectionMode:'singleRow',
                 columns: [
                   { text: 'Id', dataField: 'sn', width: 20 }, 
                   { text: 'UserName', dataField: 'username', width: 200 },
@@ -74,6 +76,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             $("#dataTable").jqxDataTable({pagerMode:"advanced"});
             $("#myQueryButton").jqxButton({ height: 25});
             $("#myEditButton").jqxButton({ height: 25});
+            $("#myEditButton").bind('click',function(){
+                var selection = $("#dataTable").jqxDataTable('getSelection');
+                if(selection.length==0)
+                {
+                    alert("请先选择需要操作的行!");
+                }else{
+                   window.location.href='edit_user?userName='+selection[0]['username'];
+                }
+            });
         });
     </script>
 </head>
