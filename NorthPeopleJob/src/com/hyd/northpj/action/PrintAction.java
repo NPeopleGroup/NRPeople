@@ -1,10 +1,7 @@
 package com.hyd.northpj.action;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.hyd.northpj.dao.impl.UserDao;
-import com.hyd.northpj.entity.AdminUser;
 import com.hyd.northpj.entity.User;
 import com.hyd.northpj.service.impl.AdminUserService;
 import com.hyd.northpj.util.CommonUtil;

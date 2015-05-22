@@ -1,5 +1,6 @@
 package com.hyd.northpj.entity;
 
+
 public class User {
 
 	private int sn;
@@ -552,4 +553,44 @@ public class User {
 		this.appointmentTime = appointmentTime;
 	}
 
+	@Override
+	public String toString() {
+		return "User [sn=" + sn + ", username=" + username + ", password="
+				+ password + ", type=" + type + ", cardID=" + cardID
+				+ ", name=" + name + ", sex=" + sex + ", nationality="
+				+ nationality + ", birth=" + birth + ", political=" + political
+				+ ", marriage=" + marriage + ", education=" + education
+				+ ", degree=" + degree + ", major=" + major
+				+ ", qualification=" + qualification + ", workTypes="
+				+ workTypes + ", fromProvincial=" + fromProvincial
+				+ ", fromCity=" + fromCity + ", fromDistrict=" + fromDistrict
+				+ ", fromAddress=" + fromAddress + ", fromProperty="
+				+ fromProperty + ", fromOrgan=" + fromOrgan + ", toOrgan="
+				+ toOrgan + ", toPolicestation=" + toPolicestation
+				+ ", toAddress=" + toAddress + ", toDistrict=" + toDistrict
+				+ ", companyName=" + companyName + ", companyTelephone="
+				+ companyTelephone + ", companyAddress=" + companyAddress
+				+ ", phone=" + phone + ", hasSocialsecurity="
+				+ hasSocialsecurity + ", hasDetention=" + hasDetention
+				+ ", hasCriminal=" + hasCriminal + ", residencePermitDate="
+				+ residencePermitDate + ", relation1=" + relation1
+				+ ", relationName1=" + relationName1 + ", relationIDCard1="
+				+ relationIDCard1 + ", relationdegree1=" + relationdegree1
+				+ ", relation2=" + relation2 + ", relationName2="
+				+ relationName2 + ", relationIDCard2=" + relationIDCard2
+				+ ", relationdegree2=" + relationdegree2 + ", relation3="
+				+ relation3 + ", relationName3=" + relationName3
+				+ ", relationIDCard3=" + relationIDCard3 + ", relationdegree3="
+				+ relationdegree3 + ", relation4=" + relation4
+				+ ", relationName4=" + relationName4 + ", relationIDCard4="
+				+ relationIDCard4 + ", relationdegree4=" + relationdegree4
+				+ ", relation5=" + relation5 + ", relationName5="
+				+ relationName5 + ", relationIDCard5=" + relationIDCard5
+				+ ", relationdegree5=" + relationdegree5 + ", relation6="
+				+ relation6 + ", relationName6=" + relationName6
+				+ ", relationIDCard6=" + relationIDCard6 + ", relationdegree6="
+				+ relationdegree6 + ", acceptionProgress=" + acceptionProgress
+				+ ", applicationTime=" + applicationTime + ", appointmentTime="
+				+ appointmentTime + "]";
+	}
 }
