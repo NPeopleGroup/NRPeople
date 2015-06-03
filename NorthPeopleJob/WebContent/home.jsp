@@ -2,7 +2,6 @@
 <%@ page pageEncoding="UTF-8"%>
 <html>
 <head>
-<title>北方人才</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>天津积分落户自助测评网</title>
 <meta name="keywords"
@@ -32,6 +31,7 @@ body {
 
 #header {
 	height: 100px; width: 100%; font-family: 微软雅黑; font: Verdana, Geneva, sans-serif; color: #FFF; font-weight: bolder; font-size: 50px;
+	padding-top: 50px;
 }
 
 #header span {
@@ -67,70 +67,85 @@ body {
 }
 
 #percentage {
-	float: left;
+	float: left; padding: 0px;
 }
 
 #process1 {
 	float: left;
 }
+
 #process2 {
 	float: left;
 }
+
 #process3 {
 	float: left;
 }
+
 #process4 {
 	float: left;
 }
+
 #process5 {
 	float: left;
 }
 </style>
 <script type="text/javascript">
 	$(function() {
-		$("#content").css("height", $(window).height() - 100 - 50 - 100);
-		$("#percentage").css("margin-left", ($(window).width() - 400 - 1000)/2);
+		$("#content").css("height", $(window).height() - 50 - 100 - 50 - 100);
+		$("#percentage").css("margin-left",
+				($(window).width() - 790) / 2 -90);//790是图标最左到最右的实际距离，90是图标最左到空白的距离
 		$(".linear").css("height", $(window).height());
 		$("#process1").mouseover(
 				function() {
 					$("#process1 img").attr("src",
-							"./img/process1_unfinished_hover.png");
+							"./img/home/process1_unfinished_hover.png");
 				});
-		$("#process1").mouseout(function() {
-			$("#process1 img").attr("src", "./img/process1_unfinished.png");
-		});
+		$("#process1").mouseout(
+				function() {
+					$("#process1 img").attr("src",
+							"./img/home/process1_unfinished.png");
+				});
 		$("#process2").mouseover(
 				function() {
 					$("#process2 img").attr("src",
-							"./img/process2_unfinished_hover.png");
+							"./img/home/process2_unfinished_hover.png");
 				});
-		$("#process2").mouseout(function() {
-			$("#process2 img").attr("src", "./img/process2_unfinished.png");
-		});
+		$("#process2").mouseout(
+				function() {
+					$("#process2 img").attr("src",
+							"./img/home/process2_unfinished.png");
+				});
 		$("#process3").mouseover(
 				function() {
 					$("#process3 img").attr("src",
-							"./img/process3_unfinished_hover.png");
+							"./img/home/process3_unfinished_hover.png");
 				});
-		$("#process3").mouseout(function() {
-			$("#process3 img").attr("src", "./img/process3_unfinished.png");
-		});
+		$("#process3").mouseout(
+				function() {
+					$("#process3 img").attr("src",
+							"./img/home/process3_unfinished.png");
+				});
 		$("#process4").mouseover(
 				function() {
 					$("#process4 img").attr("src",
-							"./img/process4_unfinished_hover.png");
+							"./img/home/process4_unfinished_hover.png");
 				});
-		$("#process4").mouseout(function() {
-			$("#process4 img").attr("src", "./img/process4_unfinished.png");
-		});
+		$("#process4").mouseout(
+				function() {
+					$("#process4 img").attr("src",
+							"./img/home/process4_unfinished.png");
+				});
 		$("#process5").mouseover(
 				function() {
 					$("#process5 img").attr("src",
-							"./img/process5_unfinished_hover.png");
+							"./img/home/process5_unfinished_hover.png");
 				});
-		$("#process5").mouseout(function() {
-			$("#process5 img").attr("src", "./img/process5_unfinished.png");
-		});
+		$("#process5").mouseout(
+				function() {
+					$("#process5 img").attr("src",
+							"./img/home/process5_unfinished.png");
+				});
 	});
 </script>
 <body>
@@ -147,22 +162,27 @@ body {
 		</div>
 		<div id="content">
 			<div id="percentage">
-				<img alt="" src="./img/percentage.png">
+				<img alt="" src="./img/home/percent75.png">
 			</div>
 			<div id="process1">
-				<a href="www.baidu.com"><img alt="" src="./img/process1_unfinished.png"></a>
+				<a href="www.baidu.com"><img alt=""
+					src="./img/home/process1_unfinished.png"></a>
 			</div>
 			<div id="process2">
-				<a href="www.baidu.com"><img alt="" src="./img/process2_unfinished.png"></a>
+				<a href="www.baidu.com"><img alt=""
+					src="./img/home/process2_unfinished.png"></a>
 			</div>
 			<div id="process3">
-				<a href="www.baidu.com"><img alt="" src="./img/process3_unfinished.png"></a>
+				<a href="www.baidu.com"><img alt=""
+					src="./img/home/process3_unfinished.png"></a>
 			</div>
 			<div id="process4">
-				<a href="www.baidu.com"><img alt="" src="./img/process4_unfinished.png"></a>
+				<a href="www.baidu.com"><img alt=""
+					src="./img/home/process4_unfinished.png"></a>
 			</div>
 			<div id="process5">
-				<a href="www.baidu.com"><img alt="" src="./img/process5_unfinished.png"></a>
+				<a href="www.baidu.com"><img alt=""
+					src="./img/home/process5_unfinished.png"></a>
 			</div>
 		</div>
 		<div id="footer">天津市积分落户自助测评平台</div>
