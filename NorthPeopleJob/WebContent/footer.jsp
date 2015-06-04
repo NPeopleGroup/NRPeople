@@ -4,10 +4,10 @@
 	<div class="footer">
 		<div class="aboud">
 			<ul>
-				<li><a href="http://www.baidu.com">链接网站1</a></li>
-				<li><a href="http://www.baidu.com">链接网站2</a></li>
-				<li><a href="http://www.baidu.com">链接网站3</a></li>
-				<li><a href="http://www.baidu.com">链接网站4</a></li>
+				<li><a href="http://www.baidu.com">链接网站A</a></li>
+				<li><a href="http://www.baidu.com">链接网站B</a></li>
+				<li><a href="http://www.baidu.com">链接网站C</a></li>
+				<li><a href="http://www.baidu.com">链接网站D</a></li>
 			</ul>
 		</div>
 		<div class="instructions">
