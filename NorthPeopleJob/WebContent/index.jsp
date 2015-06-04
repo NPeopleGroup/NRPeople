@@ -4,7 +4,7 @@
 <html lang="zh-CN" style="overflow: hidden; height: 100%;">
 <head>
 <meta charset="utf-8">
-<title>天津积分落户自助测评网</title>
+<title>天津积分落户自助测评网222</title>
 <link rel="stylesheet" href="css/jquery.fullPage.css">
 <link rel="stylesheet" href="css/buttons.css">
 <link rel="stylesheet" href="css/base.css">
