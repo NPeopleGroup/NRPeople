@@ -233,11 +233,11 @@ $(function() {
 	});
 	$("#regist_close").click(function() {
 		$("#regist").hide();
-		$("#greybackground").empty();
+		$("#greybackground").remove();
 	});
 	$("#login_close").click(function() {
 		$("#login").hide();
-		$("#greybackground").empty();
+		$("#greybackground").remove();
 	});
 
 	
