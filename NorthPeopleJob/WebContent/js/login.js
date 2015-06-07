@@ -1,4 +1,3 @@
-
 $(function() {
 
 	$("#regist").hide();
@@ -140,7 +139,8 @@ $(function() {
 							var regist_username = $(
 									"input[name='regist_username']").val();
 
-							$.ajax({
+							$
+									.ajax({
 										type : "POST",
 										url : "RegisterAction",
 										data : {
@@ -231,5 +231,14 @@ $(function() {
 		$("#login").css("left", (docwidth - 360) / 2);
 		$("#login").css("top", (docheight - 240) / 2.618);
 	});
+	$("#regist_close").click(function() {
+		$("#regist").hide();
+		$("#greybackground").empty();
+	});
+	$("#login_close").click(function() {
+		$("#login").hide();
+		$("#greybackground").empty();
+	});
 
+	
 })

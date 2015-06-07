@@ -61,14 +61,13 @@
 				<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&diams;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;化繁为简，免去您辛苦的阅读政策
 				<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&diams;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实时保存，可分数次答完
 				<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&diams;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每道选择题均配有指导图片
-				<br></br> 
-					<button
-						style="margin: 0 auto; width: 100%; margin-left: 150px; color: #FFF; line-height: 20px; border-radius: 10px; font-size: 15px; margin-top: 10px;"
-						class="button button--winona button--border-thin button--text-thick button--inverted"
-						id="login_href"
-						data-text="进 入 测 评 系 统" >
-						<span>进 入 测 评 系 统</span>
-					</button>
+				<br></br>
+				<button
+					style="margin: 0 auto; width: 100%; margin-left: 150px; color: #FFF; line-height: 20px; border-radius: 10px; font-size: 15px; margin-top: 10px;"
+					class="button button--winona button--border-thin button--text-thick button--inverted"
+					id="login_href" data-text="进 入 测 评 系 统">
+					<span>进 入 测 评 系 统</span>
+				</button>
 			</p>
 
 		</div>
@@ -104,6 +103,7 @@
 	</div>
 
 	<form id="regist" class="current1" method="post">
+		<img src="img/form_close.png" id="regist_close"></img>
 		<h3>注册</h3>
 		<label>输入电话<input type="text" name="regist_username" /><span>电话为空</span></label>
 		<label>输入密码<input type="password" name="regist_password" /><span>密码为空</span></label>
@@ -113,12 +113,13 @@
 
 
 
-	<form id="login" class="current1" method="post" style="	padding: 30px; width: 300px; background: #FFF; margin: 0 auto; position: absolute; height: auto; border-radius: 3px;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3); z-index: 200">
+	<form id="login" class="current1" method="post">
+		<img src="img/form_close.png" id="login_close"></img>
 		<h3>用户登录</h3>
 		<label>输入电话<input type="text" name="login_username" /><span>邮箱为空</span></label>
 		<label>输入密码<input type="password" name="login_password" /><span>密码为空</span></label>
-		<button type="button" id="login_button">登录</button> <button type="button" id="newuser_button">新用户注册</button>
+		<button type="button" id="login_button">登录</button>
+		<button type="button" id="newuser_button">新用户注册</button>
 	</form>
 </body>
 </html>
