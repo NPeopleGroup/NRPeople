@@ -15,8 +15,8 @@
 <script type="text/javascript" src="./js/base_utils.js"></script>
 <link rel="icon" href="./img/website.ico" type="image/x-icon" />
 
-<link href="./css/login.css" rel="stylesheet">
-<link href="./css/font-awesome-4.3.0/css/font-awesome.min.css"
+<link href="css/login.css" rel="stylesheet">
+<link href="css/font-awesome-4.3.0/css/font-awesome.min.css"
 	rel="stylesheet">
 <script type="text/javascript" src="./js/login.js"></script>
 </head>

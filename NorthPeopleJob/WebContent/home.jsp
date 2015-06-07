@@ -1,5 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
-<%@ page pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -7,7 +8,7 @@
 <meta name="keywords"
 	content="积分落户，积分入户，天津落户，落户政策，落户积分，落户指导，落户问卷，落户报名，落户登记">
 <meta name="description"
-	content="天津积分落户自助测，我们根据《2015年天津积分落户细则》，将复杂的积分落户算法提炼成约40个左右的简单的选择题，您只需几分钟的时间就能完成答题，了解自己的积分情况和需要准备的申请材料。最终的结果，不仅将包含您积分情况的总分预估，还会详细的根据您的大体情况，分类计算出基本分、导向分、附加分和负积分，并提供相关政策的指导，在政策允许范围内，帮助您合理增分。除了得分情况之外，系统还会根据您的答题情况，提示您需要准备的材料，避免您因为忘记携带某份材料而反复奔波。">
+	content="天津积分落户自助测，我们根据《2015年天津积分落户细则》，将复杂的积分落户算法提炼成约40个左右的简单的选择题，您只需几分钟的时间就能完成答题，了解自己的落户积分情况和需要准备的申请材料。最终的结果，不仅将包含您积分情况的总分预估，还会详细的根据您的大体情况，分类计算出基本分、导向分、附加分和负积分，并提供相关政策的指导，在政策允许范围内，帮助您合理增分。除了得分情况之外，系统还会根据您的答题情况，提示您需要准备的材料，避免您因为忘记携带某份材料而反复奔波。">
 <link href="./css/public.css" rel="stylesheet">
 <script src="./js/jquery.js"></script>
 <link rel="icon" href="./img/website.ico" type="image/x-icon" />
@@ -89,12 +90,15 @@ body {
 #process5 {
 	float: left;
 }
+
+.entry {
+	float: right; color: #FFF; line-height: 30px; color: #FFF; height:30px;
+}
 </style>
 <script type="text/javascript">
 	$(function() {
 		$("#content").css("height", $(window).height() - 50 - 100 - 50 - 100);
-		$("#percentage").css("margin-left",
-				($(window).width() - 790) / 2 -90);//790是图标最左到最右的实际距离，90是图标最左到空白的距离
+		$("#percentage").css("margin-left", ($(window).width() - 790) / 2 - 90);//790是图标最左到最右的实际距离，90是图标最左到空白的距离
 		$(".linear").css("height", $(window).height());
 		$("#process1").mouseover(
 				function() {
@@ -155,10 +159,28 @@ body {
 		</div>
 		<div id="subheader">
 			<span>精心设计的测评问题+一目了然的分数结果+详细罗列的所需材料</span>
+
 			<div id="tag">
-				<a href="www.baidu.com"><img alt="" src="./img/tag1.png"></a><a
-					href="www.baidu.com"><img alt="" src="./img/tag2.png"></a>
+				<a href="www.baidu.com"><img alt="" src="./img/tag1.png" title="修改密码"></a><a
+					href="www.baidu.com"><img alt="" src="./img/tag2.png" title="联系我们"></a>
 			</div>
+			<span class="entry"> <%
+ 	String NorthPeopleJob_username = (String) session
+ 			.getAttribute("NorthPeopleJob_username");
+ 	if (NorthPeopleJob_username != null) {
+ 		out.print("<span>欢迎您！"
+ 				+ NorthPeopleJob_username.substring(0, 3)
+ 				+ "XXXX"
+ 				+ NorthPeopleJob_username
+ 						.substring(NorthPeopleJob_username.length() - 4)
+ 				+ "</span>");
+ 	} else {
+ 		out.print("<span>登录</span><span>注册</span>");
+ 	}
+ %>
+
+
+			</span>
 		</div>
 		<div id="content">
 			<div id="percentage">

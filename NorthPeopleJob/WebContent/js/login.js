@@ -154,7 +154,7 @@ $(function() {
 										success : function(msg) {
 											if (msg == "success") {
 
-												location.href = "index.jsp";
+												location.href = "home.jsp";
 											}
 											if (msg == "input") {
 												var a = $(
@@ -186,7 +186,7 @@ $(function() {
 						},
 						success : function(msg) {
 							if (msg == "success") {
-								location.href = "index.jsp";
+								location.href = "home.jsp";
 							}
 							if (msg == "input") {
 								var a = $("input[name='login_password']")
@@ -200,7 +200,8 @@ $(function() {
 				}
 			});
 
-	$("#regist_href").click(function() {
+	$("#newuser_button").click(function() {
+		$("#login").hide();
 		$("#regist").addClass("current");
 		$("#regist").fadeIn("fast");
 		// 获取页面文档的高度

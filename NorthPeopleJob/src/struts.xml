@@ -7,15 +7,15 @@
 	<package name="actions" extends="struts-default,json-default"
 		namespace="/">
 		<action name="RegisterAction" class="com.hyd.northpj.action.RegisterAction">
-			<result name="success">index.jsp
+			<result name="success">home.jsp
 			</result>
-			<result name="input">index.jsp
+			<result name="input">home.jsp
 			</result>
 		</action>
 		<action name="LoginAction" class="com.hyd.northpj.action.LoginAction">
-			<result name="success">index.jsp
+			<result name="success">home.jsp
 			</result>
-			<result name="input">index.jsp
+			<result name="input">home.jsp
 			</result>
 		</action>
 		<!-- 此处需要修改 -->
