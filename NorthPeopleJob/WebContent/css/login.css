@@ -1,0 +1,131 @@
+/* 清除浮动 */
+* {
+	padding: 0; margin: 0;
+}
+
+.clearfix:after {
+	content: ""; display: table; clear: both;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: "Microsoft YaHei"; background: #EBEBEB; background: url(../images/stardust.png); font-weight: 300; font-size: 15px; color: #333;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*regist界面*/
+#regist {
+	padding: 30px; width: 300px; background: #FFF; margin: 0 auto; position: absolute; height: auto; border-radius: 3px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3); z-index: 200;
+}
+
+.current1 {
+	-moz-transform: scale(0); -webkit-transform: scale(0); -o-transform: scale(0); -ms-transform: scale(0); transform: scale(0);
+	-moz-transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.current {
+	-moz-transform: scale(1); -webkit-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1);
+}
+
+#regist h3 {
+	font-size: 18px; line-height: 25px; font-weight: 300; letter-spacing: 3px; margin-bottom: 20px; color: #353535; text-align: center;
+}
+
+#regist label {
+	color: #353535; display: block; height: 35px; padding: 0 10px; font-size: 12px; line-height: 35px; border: 1px #808080 solid;
+	background-color: #EBEBEB; margin-bottom: 28px; position: relative;
+}
+
+#regist label input {
+	font: 13px/20px "Microsoft YaHei"; background: #EBEBEB; height: 35px; border: none; margin: 0px 0 0 10px; width: 150px; outline: none;
+	letter-spacing: normal; z-index: 1; position: relative;
+}
+
+#regist label  span {
+	display: block; height: 35px; color: #00a2ca; width: 100px; position: absolute; top: 0; left: 190px; text-align: right; padding: 0 10px 0 0;
+	z-index: 0; display: none;
+}
+
+#regist button, .tip button {
+	font-family: "Microsoft YaHei"; cursor: pointer; width: 90px; height: 30px; background: #00a2ca; border: none; font-size: 14px; line-height: 30px;
+	letter-spacing: 3px; color: #FFF; position: relative; -moz-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in; transition: all 0.2s ease-in;
+}
+
+#regist button:hover, .tip button:hover {
+	background: #52c2da; color: #000;
+}
+#regist_close {
+	float: right;
+}
+/*logint界面*/
+#login {
+	padding: 30px; width: 300px; background: #FFF; margin: 0 auto; position: absolute; height: auto; border-radius: 3px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3); z-index: 200
+}
+
+.current1 {
+	-moz-transform: scale(0); -webkit-transform: scale(0); -o-transform: scale(0); -ms-transform: scale(0); transform: scale(0);
+	-moz-transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.current {
+	-moz-transform: scale(1); -webkit-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1);
+}
+
+#login h3 {
+	font-size: 18px; line-height: 25px; font-weight: 300; letter-spacing: 3px; margin-bottom: 20px; color: #353535; text-align: center;
+}
+
+#login label {
+	color: #353535; display: block; height: 35px; padding: 0 10px; font-size: 12px; line-height: 35px; background: #EBEBEB; margin-bottom: 10px;
+	position: relative; border: 1px #808080 solid;
+}
+
+#login label input {
+	font: 13px/20px "Microsoft YaHei"; background: #EBEBEB; height: 35px; border: none; margin: 0px 0 0 10px; width: 150px; outline: none;
+	letter-spacing: normal; z-index: 1; position: relative;
+}
+
+#login label  span {
+	display: block; height: 35px; color: #00a2ca; width: 100px; position: absolute; top: 0; left: 190px; text-align: right; padding: 0 10px 0 0;
+	z-index: 0; display: none;
+}
+
+#login button {
+	font-family: "Microsoft YaHei"; cursor: pointer; width: 140px; height: 35px; background: #00a2ca; border: none; font-size: 14px; line-height: 30px;
+	letter-spacing: 3px; color: #FFF; position: relative; margin-top: 10px; -moz-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in; transition: all 0.2s ease-in;
+}
+
+#login button:hover {
+	background: #52c2da; color: #000;
+}
+
+#newuser_button {
+	font-family: "Microsoft YaHei"; cursor: pointer; width: 140px; height: 35px; background: #00a2ca; border: none; font-size: 14px; line-height: 30px;
+	letter-spacing: 3px; color: #FFF; position: relative; margin-top: 10px; -moz-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in; transition: all 0.2s ease-in; float: right;
+}
+
+#login button:hover {
+	background: #52c2da; color: #000;
+}
+
+#greybackground {
+	background: #000; display: block; z-index: 100; width: 100%; position: absolute; top: 0; left: 0;
+}
+
+#login_close {
+	float: right;
+}

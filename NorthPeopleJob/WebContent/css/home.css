@@ -1,0 +1,41 @@
+body{
+	background-color: #fff!important;
+}									
+.DisplayDiv{
+	width: 990px;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+.DisplayDiv .DDl{ float: left;}
+.DisplayDiv .DDr{ float: right;}
+.DisplayDiv .w320{
+	 max-width: 330px;
+	 *width:330px; 
+	 margin-left: 50px;
+}
+.DisplayDiv .DDl_title{
+	font-size: 31px;
+	padding: 10px 0 0 0;
+	color: #6E6E6E;
+}
+.DisplayDiv .DDl_top{
+    padding: 10px 0;
+    color: #6E6E6E;
+}
+.DisplayDiv .DDl_list ul li{line-height: 21px;}
+.DisplayDiv ul i{
+	float: left; width: 12px;height: 12px;margin: 5px 5px 0 0;
+	background-image: url(/static/images/piont.png);
+	background-repeat: no-repeat;
+}
+.DisplayDiv .Point_1 i{background-position: -2px -2px;}
+.DisplayDiv .Point_2 i{background-position: -2px -17px;}
+.DisplayDiv .Point_3 i{background-position: -2px -31px;}
+.DDl_title i{
+	float: left;
+	background-image: url("/static/images/Description/hot.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin: 8px 8px 0  0;
+}
