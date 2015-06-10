@@ -53,10 +53,11 @@ public class QuestionService implements QuestionServiceInterface {
 	@Override
 	public int setQuestion(Question question) throws Exception {
 		// TODO Auto-generated method stub
-		if (ValidateUtil.validateQuestionAllProperty(question) != 0) {
-			myLogger.error("要修改的实例属性通过验证！--->question:" + question.toString());
-			return 1;
-		}
+		// TODO 这里有private 属性的问题 暂时先注释掉
+		// if (ValidateUtil.validateQuestionAllProperty(question) != 0) {
+		// myLogger.error("要修改的实例属性通过验证！--->question:" + question.toString());
+		// return 1;
+		// }
 		int updateResult = myQuestionDao.updateQuestion(question);
 		if (updateResult != 0) {
 			myLogger.error("要修改的实例信息出现错误！");
