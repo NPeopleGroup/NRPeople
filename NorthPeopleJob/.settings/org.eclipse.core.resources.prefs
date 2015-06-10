@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//WebContent/WEB-INF/admin/admin_login.jsp=UTF-8
+encoding//WebContent/WEB-INF/admin/admin_question_add.jsp=UTF-8
 encoding//WebContent/css/public.css=UTF-8
 encoding//WebContent/index.jsp=UTF-8
 encoding//src/log4j.properties=UTF-8

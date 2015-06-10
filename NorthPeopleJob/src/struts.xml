@@ -39,6 +39,34 @@
 		<action name="admin_view_users" class="com.hyd.northpj.action.ViewUserListAction">
 			<result name="success">/WEB-INF/admin/admin_view_users.jsp</result>
 		</action>
+		
+		<!-- 问题编辑页面的一系列Action -->
+		<action name="adminQuestionListPage">
+			<result name="success">/WEB-INF/admin/admin_question_list.jsp</result>
+		</action>
+		<action name="adminQuestionListAction" class="com.hyd.northpj.action.AdminQuestionListAction">
+			<result type="json">
+			</result>
+		</action>
+		<action name="adminQuestionAddPage">
+			<result name="success">/WEB-INF/admin/admin_question_add.jsp</result>
+		</action>
+		<action name="adminQuestionAddAction" class="com.hyd.northpj.action.AdminQuestionAddAction">
+			<result name="success">/WEB-INF/admin/admin_question_list.jsp</result>
+		</action>
+		<action name="adminQuestionEditPage" class="com.hyd.northpj.action.AdminQuestionEditPageAction">
+			<result name="success">/WEB-INF/admin/admin_question_edit.jsp</result>
+		</action>
+		<action name="adminQuestionEditAction" class="com.hyd.northpj.action.AdminQuestionEditAction">
+			<result name="success">/WEB-INF/admin/admin_question_list.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+
+
 		<action name="printAction" class="com.hyd.northpj.action.PrintAction">
 			<result type="json">
 			</result>

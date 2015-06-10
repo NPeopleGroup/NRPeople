@@ -43,7 +43,7 @@ public class QuestionService implements QuestionServiceInterface {
 	@Override
 	public Question getQuestion(String id) throws Exception {
 		// TODO Auto-generated method stub
-		if (ValidateUtil.isPassSqlFilter(id)) {
+		if (!ValidateUtil.isPassSqlFilter(id)) {
 			myLogger.error("要查询的实例,questionId通过验证！--->questionId:" + id);
 			return null;
 		}

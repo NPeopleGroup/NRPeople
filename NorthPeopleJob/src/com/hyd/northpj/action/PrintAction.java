@@ -33,6 +33,8 @@ public class PrintAction extends ActionSupport{
 		AdminUserService myAdminUserService=new AdminUserService();
 		List<User> myUserList=myAdminUserService.getNormalUserList();
 		CommonUtil.toBeJson(myUserList, myUserList.size());
+//		System.out.println(myUserList.toString());
+		
 		
 		return null;
 	}
