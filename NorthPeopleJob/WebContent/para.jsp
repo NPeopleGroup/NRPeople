@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Examples</title>
+	<title>注册</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link href="css/register.css" rel="stylesheet">
@@ -79,11 +79,11 @@
 											<tr>
 												<td width="118" height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">申请人类型&nbsp;</td>
 												<td height="30" colspan="5" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<input name="personType" id="personType1" type="radio" value="1" onkeyup="enterNext('idcard');">
+													<input name="type" id="personType1" type="radio" value="1" onkeyup="enterNext('idcard');">
 													企业员工&nbsp;&nbsp;&nbsp;&nbsp;
-													<input name="personType" id="personType2" type="radio" value="2" onkeyup="enterNext('idcard');">
+													<input name="type" id="personType2" type="radio" value="2" onkeyup="enterNext('idcard');">
 													投资者&nbsp;&nbsp;&nbsp;&nbsp;
-													<input name="personType" id="personType3" type="radio" value="3" onkeyup="enterNext('idcard');">个体工商户</td>
+													<input name="type" id="personType3" type="radio" value="3" onkeyup="enterNext('idcard');">个体工商户</td>
 											</tr>
 											<tr>
 												<td height="1" colspan="6" background="./img/JZZZL_line.jpg"></td>
@@ -91,7 +91,7 @@
 											<tr>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">居住证/身份证号&nbsp;</td>
 												<td height="30" colspan="5" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<input type="text" style="font-size:18px;font-weight: bold;" value="" size="61" name="cardID" id="idcard" maxlength="18" onkeyup="enterNext('xm');"></td>
+													<input type="text" style="font-size:18px;font-weight: bold;" value="" size="61" name="cardID" id="idcard" maxlength="18" onkeyup="enterNext('name');"></td>
 											</tr>
 											<tr>
 												<td height="1" colspan="6" background="./img/JZZZL_line.jpg"></td>
@@ -99,15 +99,15 @@
 											<tr>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;</td>
 												<td width="150" height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<input type="text" style="font-size:12px;" name="xm" onfocus="this.select();" onkeyup="enterNext('xb');" tabindex="10" maxlength="10" id="xm" size="20" value=""></td>
+													<input type="text" style="font-size:12px;" name="name" onfocus="this.select();" onkeyup="enterNext('sex');" tabindex="10" maxlength="10" id="name" size="20" value=""></td>
 												<td width="100" height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">性&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;</td>
 												<td width="150" height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<input name="xb" type="radio" value="男" onkeyup="enterNext('mz');" style="font-color: red;" tabindex="10" id="xb">
+													<input name="sex" type="radio" value="男" onkeyup="enterNext('mz');" style="font-color: red;" tabindex="10" id="sex">
 													男
-													<input name="xb" type="radio" value="女" onkeyup="enterNext('mz');" style="font-color: red;" tabindex="10" id="xb2">女</td>
+													<input name="sex" type="radio" value="女" onkeyup="enterNext('mz');" style="font-color: red;" tabindex="10" id="xb2">女</td>
 												<td width="100" height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">民&nbsp;&nbsp;&nbsp;&nbsp;族&nbsp;</td>
 												<td width="150" height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<select id="mz" name="nationality" style="width:130px;" onkeyup="enterNext('csrq');" tabindex="10">
+													<select id="mz" name="nationality" style="width:130px;" onkeyup="enterNext('birth');" tabindex="10">
 														<option value="1" selected="selected"></option>
 														<option value="汉族">汉族</option>
 														<option value="蒙古族">蒙古族</option>
@@ -174,11 +174,11 @@
 											<tr>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">出生日期&nbsp;</td>
 												<td height="30"  width="180px" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<input type="text" style="font-size:12px;" name="csrq" tabindex="10" onFocus="WdatePicker({isShowClear:false,readOnly:true})" id="csrq" size="20" value="">
-													<img onclick="WdatePicker({el:'csrq'})" src="js/My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle"></td>
+													<input type="text" style="font-size:12px;" name="birth" tabindex="10" onFocus="WdatePicker({isShowClear:false,readOnly:true})" id="birth" size="20" value="">
+													<img onclick="WdatePicker({el:'birth'})" src="js/My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle"></td>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">政治面貌&nbsp;</td>
 												<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<select id="zzmm" name="zzmm" style="width:127px;" onkeyup="enterNext('hyzk');" tabindex="10">
+													<select id="political" name="political" style="width:127px;" onkeyup="enterNext('marriage');" tabindex="10">
 														<option value="1" selected="selected"></option>
 														<option value="中共党员">中共党员</option>
 														<option value="中共预备党员">中共预备党员</option>
@@ -197,7 +197,7 @@
 												</td>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">婚姻状况&nbsp;</td>
 												<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<select id="hyzk" name="hyzk" style="width:130px;" onkeyup="enterNext('whcd');" tabindex="10">
+													<select id="marriage" name="marriage" style="width:130px;" onkeyup="enterNext('education');" tabindex="10">
 														<option value="1" selected="selected"></option>
 														<option value="已婚">已婚</option>
 														<option value="未婚">未婚</option>
@@ -212,7 +212,7 @@
 											<tr>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">文化程度&nbsp;</td>
 												<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<select id="whcd" name="whcd" style="width:130px;" onkeyup="enterNext('xw');" tabindex="10">
+													<select id="education" name="education" style="width:130px;" onkeyup="enterNext('degree');" tabindex="10">
 														<option value="1" selected="selected"></option>
 														<option value="研究生">研究生</option>
 														<option value="大学本科">大学本科</option>
@@ -227,7 +227,7 @@
 												</td>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">学&nbsp;&nbsp;&nbsp;&nbsp;位&nbsp;</td>
 												<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<select id="xw" name="xw" style="width:130px;" onkeyup="enterNext('zy');" tabindex="10">
+													<select id="degree" name="degree" style="width:130px;" onkeyup="enterNext('major');" tabindex="10">
 														<option value="1" selected="selected"></option>
 														<option value="博士后">博士后</option>
 														<option value="名誉博士">名誉博士</option>
@@ -240,7 +240,7 @@
 												</td>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">专&nbsp;&nbsp;&nbsp;&nbsp;业&nbsp;</td>
 												<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<input style="font-size:12px;" name="zy" type="text" onfocus="this.select();" onkeyup="enterNext('zyzg');" tabindex="10" maxlength="50" class="textarea" id="zy" value=""></td>
+													<input style="font-size:12px;" name="major" type="text" onfocus="this.select();" onkeyup="enterNext('qualification');" tabindex="10" maxlength="50" class="textarea" id="major" value=""></td>
 											</tr>
 											<tr>
 												<td height="1" colspan="6" background="./img/JZZZL_line.jpg"></td>
@@ -248,10 +248,10 @@
 											<tr>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">职业资格&nbsp;</td>
 												<td height="30" colspan="3" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<input style="font-size:12px;" name="zyzg" type="text" onfocus="this.select();" onkeyup="enterNext('gz');" tabindex="10" maxlength="100" class="textarea" id="zyzg" size="61" value=""></td>
+													<input style="font-size:12px;" name="qualification" type="text" onfocus="this.select();" onkeyup="enterNext('workTypes');" tabindex="10" maxlength="100" class="textarea" id="qualification" size="61" value=""></td>
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">工&nbsp;&nbsp;&nbsp;&nbsp;种&nbsp;</td>
 												<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-													<input style="font-size:12px;" name="gz" type="text" onfocus="this.select();" onkeyup="enterNext('qcd_sj');" tabindex="10" maxlength="15" class="textarea" id="gz" size="20" value=""></td>
+													<input style="font-size:12px;" name="workTypes" type="text" onfocus="this.select();" onkeyup="enterNext('qcd_sj');" tabindex="10" maxlength="15" class="textarea" id="workTypes" size="20" value=""></td>
 											</tr>
 											<tr>
 												<td height="1" colspan="6" background="./img/JZZZL_line.jpg"></td>
@@ -260,10 +260,10 @@
 												<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">迁出地省市县（区）&nbsp;</td>
 												<td height="30" colspan="5" align="left" valign="middle" class="jzzzl_box_main_font_02">
 													&nbsp;省（市自治区）
-													<select id="qcd_sj" name="province" style="width:200px;" tabindex="10">
+													<select id="qcd_sj" name="fromProvincial" style="width:200px;" tabindex="10">
 												</select>
 												&nbsp;&nbsp;&nbsp;市
-												<select id="qcd_sj_sj" name="city" style="width:285px;" tabindex="10"></select>
+												<select id="qcd_sj_sj" name="fromCity" style="width:285px;" tabindex="10"></select>
 											</td>
 										</tr>
 										<tr>
@@ -271,7 +271,7 @@
 											<td height="30" colspan="5" align="left" valign="middle" class="jzzzl_box_main_font_02">
 												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;区（县）
-												<select id="qcd" name="area" style="width:200px;" onkeyup="enterNext('hkszd');" tabindex="10"></select>
+												<select id="qcd" name="fromDistrict" style="width:200px;" onkeyup="enterNext('fromAddress');" tabindex="10"></select>
 											</td>
 										</tr>
 										<tr>
@@ -280,10 +280,10 @@
 										<tr>
 											<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">迁出地详细地址&nbsp;</td>
 											<td height="30" colspan="3" align="left" valign="middle" class="jzzzl_box_main_font_02">
-												<input style="font-size:12px;" name="hkszd" type="text" onfocus="this.select();" onkeyup="enterNext('hkxz');" tabindex="10" maxlength="100" class="textarea" id="hkszd" size="61" value=""></td>
+												<input style="font-size:12px;" name="fromAddress" type="text" onfocus="this.select();" onkeyup="enterNext('fromProperty');" tabindex="10" maxlength="100" class="textarea" id="fromAddress" size="61" value=""></td>
 											<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">现户口性质&nbsp;</td>
 											<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-												<select id="hkxz" name="hkxz" style="width:130px;" onkeyup="enterNext('hkdjjg');" tabindex="10">
+												<select id="fromProperty" name="fromProperty" style="width:130px;" onkeyup="enterNext('fromOrgan');" tabindex="10">
 													<option value="1" selected="selected"></option>
 													<option value="未落常住户口">未落常住户口</option>
 													<option value="非农业家庭户口">非农业家庭户口</option>
@@ -304,7 +304,7 @@
 										<tr>
 											<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">现户籍登记机关&nbsp;</td>
 											<td height="30" colspan="5" align="left" valign="middle" class="jzzzl_box_main_font_02">
-												<input style="font-size:12px;" name="hkdjjg" type="text" onfocus="this.select();" onkeyup="enterNext('nhkdjjgfj');" tabindex="10" maxlength="100" class="textarea" id="hkdjjg" size="61" value=""></td>
+												<input style="font-size:12px;" name="fromOrgan" type="text" onfocus="this.select();" onkeyup="enterNext('toOrgan');" tabindex="10" maxlength="100" class="textarea" id="fromOrgan" size="61" value=""></td>
 
 										</tr>
 										<tr>
@@ -314,7 +314,7 @@
 											<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">迁入地户籍登记机关&nbsp;</td>
 											<td height="30" colspan="5" align="left" valign="middle" class="jzzzl_box_main_font_02">
 												<div id="city_5">
-													<select id="nhkdjjgfj" name="nhkdjjgfj" style="width:240px;" onchange="myPoliceChangeHandler(this)" tabindex="10">
+													<select id="toOrgan" name="toOrgan" style="width:240px;" onchange="myPoliceChangeHandler(this)" tabindex="10">
 														<option value="0"></option>
 
 														<option value="01">天津市公安局和平分局</option>
@@ -347,7 +347,7 @@
 														<option value="07">天津市滨海新区公安局塘沽分局</option>
 
 													</select>
-													<select id="nhkdjjg" name="nhkdjjg" style="width:240px;" onkeyup="enterNext('zz');" tabindex="10">
+													<select id="toPolicestation" name="toPolicestation" style="width:240px;" onkeyup="enterNext('toAddress');" tabindex="10">
 
 														<!-- <option value="1201010001">和平分局院校</option>
 													<option value="1201010002">和平分局南市派出所</option>
@@ -377,10 +377,10 @@
 									<tr>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">迁入地详细地址&nbsp;</td>
 										<td height="30" colspan="3" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input style="font-size:12px;" name="zz" type="text" onfocus="this.select();" onkeyup="enterNext('lhdq');" tabindex="10" maxlength="100" class="textarea" id="zz" size="61" value=""></td>
+											<input style="font-size:12px;" name="toAddress" type="text" onfocus="this.select();" onkeyup="enterNext('toDistrict');" tabindex="10" maxlength="100" class="textarea" id="toAddress" size="61" value=""></td>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">拟落户地区&nbsp;</td>
 										<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<select name="lhdq" style="width:130px;" id="lhdq" onkeyup="enterNext('dwmc');" tabindex="10" class="textarea">
+											<select name="toDistrict" style="width:130px;" id="toDistrict" onkeyup="enterNext('companyName');" tabindex="10" class="textarea">
 												<option value="1" selected="selected"></option>
 												<option value="11">和平区</option>
 												<option value="12">河东区</option>
@@ -413,10 +413,10 @@
 									<tr>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">现单位名称&nbsp;</td>
 										<td height="30" colspan="3" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input style="font-size:12px;" name="dwmc" type="text" onfocus="this.select();" onkeyup="enterNext('dwdh');" maxlength="100" tabindex="10" class="textarea" id="dwmc" size="61" value="天津富强伟业精密五金有限公司"></td>
+											<input style="font-size:12px;" name="companyName" type="text" onfocus="this.select();" onkeyup="enterNext('companyTelephone');" maxlength="100" tabindex="10" class="textarea" id="companyName" size="61" value="天津富强伟业精密五金有限公司"></td>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">单位电话&nbsp;</td>
 										<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input style="font-size:12px;" name="dwdh" type="text" onfocus="this.select();" onkeyup="enterNext('dwdz');" tabindex="10" maxlength="100" class="textarea" id="dwdh" size="20" value="15022781050"></td>
+											<input style="font-size:12px;" name="companyTelephone" type="text" onfocus="this.select();" onkeyup="enterNext('companyAddress');" tabindex="10" maxlength="100" class="textarea" id="companyTelephone" size="20" value="15022781050"></td>
 									</tr>
 									<tr>
 										<td height="1" colspan="6" background="./img/JZZZL_line.jpg"></td>
@@ -424,10 +424,10 @@
 									<tr>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">单位地址&nbsp;</td>
 										<td height="30" colspan="3" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input style="font-size:12px;" name="dwdz" type="text" onfocus="this.select();" onkeyup="enterNext('lxdh');" tabindex="10" class="textarea" maxlength="100" id="dwdz" size="61" value="天津市东丽区大毕庄工业区"></td>
+											<input style="font-size:12px;" name="companyAddress" type="text" onfocus="this.select();" onkeyup="enterNext('phone');" tabindex="10" class="textarea" maxlength="100" id="companyAddress" size="61" value="天津市东丽区大毕庄工业区"></td>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">本人电话&nbsp;</td>
 										<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input style="font-size:12px;" name="lxdh" type="text" onfocus="this.select();" onkeyup="enterNext('cjbx');" tabindex="10" class="textarea" id="lxdh" maxlength="11" size="20" value=""></td>
+											<input style="font-size:12px;" name="phone" type="text" onfocus="this.select();" onkeyup="enterNext('hasSocialsecurity');" tabindex="10" class="textarea" id="phone" maxlength="11" size="20" value=""></td>
 									</tr>
 									<tr>
 										<td height="1" colspan="6" background="./img/JZZZL_line.jpg"></td>
@@ -435,15 +435,15 @@
 									<tr>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">社保缴纳&nbsp;</td>
 										<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input name="cjbx" onkeyup="enterNext('hasJL');" type="radio" value="是" style="font-color: red;" tabindex="10" id="cjbx">
+											<input name="hasSocialsecurity" onkeyup="enterNext('hasDetention');" type="radio" value="是" style="font-color: red;" tabindex="10" id="hasSocialsecurity">
 											是
-											<input name="cjbx" onkeyup="enterNext('hasJL');" type="radio" value="否" style="font-color: red;" tabindex="10" id="cjbx2">否</td>
+											<input name="hasSocialsecurity" onkeyup="enterNext('hasDetention');" type="radio" value="否" style="font-color: red;" tabindex="10" id="cjbx2">否</td>
 										<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_04"></td>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04" colspan="2">积分期间有无行政拘留记录&nbsp;</td>
 										<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input name="hasJL" onkeyup="enterNext('cardregtime');" type="radio" value="有" style="font-color: red;" tabindex="10" id="hasJL">
+											<input name="hasDetention" onkeyup="enterNext('residencePermitDate');" type="radio" value="有" style="font-color: red;" tabindex="10" id="hasDetention">
 											有
-											<input name="hasJL" onkeyup="enterNext('cardregtime');" type="radio" value="无" style="font-color: red;" tabindex="10" id="hasJL2">无&nbsp;&nbsp;</td>
+											<input name="hasDetention" onkeyup="enterNext('residencePermitDate');" type="radio" value="无" style="font-color: red;" tabindex="10" id="hasJL2">无&nbsp;&nbsp;</td>
 									</tr>
 									<tr>
 										<td height="1" colspan="6" background="./img/JZZZL_line.jpg"></td>
@@ -451,15 +451,15 @@
 									<tr>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04">居住证申领日期&nbsp;</td>
 										<td height="30" width="180px" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input style="font-size:12px;" name="cardregtime" id="cardregtime" abindex="10" onFocus="WdatePicker({isShowClear:false,readOnly:true})" class="textarea" size="20" value="">
-											<img onclick="WdatePicker({el:'cardregtime'})" src="js/My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle"></td>
+											<input style="font-size:12px;" name="residencePermitDate" id="residencePermitDate" abindex="10" onFocus="WdatePicker({isShowClear:false,readOnly:true})" class="textarea" size="20" value="">
+											<img onclick="WdatePicker({el:'residencePermitDate'})" src="js/My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle"></td>
 
 										<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_04"></td>
 										<td height="30" align="right" valign="middle" class="jzzzl_box_main_font_04" colspan="2">积分期间有无犯罪获刑记录&nbsp;</td>
 										<td height="30" align="left" valign="middle" class="jzzzl_box_main_font_02">
-											<input name="hasFZ" onkeyup="enterNext('checkcode');" type="radio" value="有" onfocus="this.select();" style="font-color: red;" tabindex="10" id="hasFZ">
+											<input name="hasCriminal" onkeyup="enterNext('checkcode');" type="radio" value="有" onfocus="this.select();" style="font-color: red;" tabindex="10" id="hasCriminal">
 											有
-											<input name="hasFZ" onkeyup="enterNext('checkcode');" type="radio" value="无" onfocus="this.select();" style="font-color: red;" tabindex="10" id="hasFZ2">无&nbsp;&nbsp;</td>
+											<input name="hasCriminal" onkeyup="enterNext('checkcode');" type="radio" value="无" onfocus="this.select();" style="font-color: red;" tabindex="10" id="hasFZ2">无&nbsp;&nbsp;</td>
 									</tr>
 									<tr>
 										<td height="1" colspan="6" background="./img/JZZZL_line.jpg"></td>
@@ -494,7 +494,8 @@
 										<td height="1" colspan="5" background="./img/JZZZL_line.jpg"></td>
 									</tr>
 								</tbody>
-								<tbody id="roles"></tbody>
+								<tbody id="roles">
+								</tbody>
 								<!--循环开始-->
 								<tbody>
 									<tr>
@@ -515,6 +516,7 @@
 									</tr>
 								</tbody>
 							</table>
+							<input type="submit" value="login">
 						</form>
 					</td>
 				</tr>
@@ -524,7 +526,7 @@
 </div>
 </div>
 <script type="text/javascript">
-		new PCAS("province=吉林省,请选择省份","city=白城市,请选择城市","area=大安市,请选择地区");
+		new PCAS("fromProvincial=吉林省,请选择省份","fromCity=白城市,请选择城市","fromDistrict=大安市,请选择地区");
 	</script>
 
 </body>
