@@ -1,7 +1,7 @@
   var idcardold = "";
   function checkPage(save){
   	//检测申请人类型是否选择
-    var personType = document.getElementsByName("personType");
+    var personType = document.getElementsByName("type");
     var personType2=false;
     if(null!=personType){
 	    for(var i=0;i<personType.length;i++){
@@ -37,7 +37,7 @@
     }
     
     //检测居住证申领日期不能为空
-    var cardregtime=document.all.cardregtime.value;
+    var cardregtime=document.all.residencePermitDate.value;
     if(cardregtime==""){
       alert("居住证申领日期不能为空！");
       document.all.cardregtime.focus();
@@ -45,7 +45,7 @@
     }
     
     //检测名不能为空并且大于2个汉字
-    var xm=document.all.xm.value;
+    var xm=document.all.name.value;
     if(xm==""){
       alert("姓名不能为空！");
       document.all.xm.focus();
@@ -58,7 +58,7 @@
     }
     
     //检测性别是否选择
-    var xb = document.getElementsByName("xb");
+    var xb = document.getElementsByName("sex");
     var xb2=false;
     if(null!=xb){
 	    for(var i=0;i<xb.length;i++){
@@ -82,67 +82,67 @@
     }
     
     //日期格式
-    if(document.getElementById("csrq").value!=""){
+    if(document.getElementById("birth").value!=""){
     	if(!checkDate("csrq","")){ document.getElementById("csrq").focus();return false;}
     }else{
     	alert("请录入出生日期！");
-    	document.getElementById("csrq").focus();
+    	document.getElementById("birth").focus();
     	return false;
     }
     
     //检测政治面貌是否选择
-    var zzmm = document.getElementById("zzmm");
+    var zzmm = document.getElementById("political");
     if(zzmm.value==1){
     	alert("请选择政治面貌！");
-    	document.getElementById("zzmm").focus();
+    	document.getElementById("political").focus();
     	return false;
     }
     
     //检测婚姻状况是否选择
-    var hyzk = document.getElementById("hyzk");
+    var hyzk = document.getElementById("marriage");
     if(hyzk.value==1){
     	alert("请选择婚姻状况！");
-    	document.getElementById("hyzk").focus();
+    	document.getElementById("marriage").focus();
     	return false;
     }
     
     //文化程度
-    var whcd = document.getElementById("whcd");
+    var whcd = document.getElementById("education");
     if(whcd.value==1){
     	alert("请选择文化程度！");
-    	document.getElementById("whcd").focus();
+    	document.getElementById("education").focus();
     	return false;
     }
     
     //学位
-    var xw = document.getElementById("xw");
+    var xw = document.getElementById("degree");
     if(xw.value==1){
     	alert("请选择学位！");
-    	document.getElementById("xw").focus();
+    	document.getElementById("degree").focus();
     	return false;
     }
     
     //专业
-    var zy = document.getElementById("zy");
+    var zy = document.getElementById("major");
     if(zy.value.length==0){
     	alert("请录入专业！");
-    	document.getElementById("zy").focus();
+    	document.getElementById("major").focus();
     	return false;
     }
     
     //职业资格
-    var zyzg = document.getElementById("zyzg");
+    var zyzg = document.getElementById("qualification");
     if(zyzg.value.length==0){
     	alert("请录入职业资格！");
-    	document.getElementById("zyzg").focus();
+    	document.getElementById("qualification").focus();
     	return false;
     }
     
     //工种
-    var gz = document.getElementById("gz");
+    var gz = document.getElementById("workTypes");
     if(gz.value.length==0){
     	alert("请录入工种！");
-    	document.getElementById("gz").focus();
+    	document.getElementById("workTypes").focus();
     	return false;
     }
     
@@ -169,85 +169,85 @@
     }
     
     //现户籍登记机关
-    var hkszd = document.getElementById("hkszd");
+    var hkszd = document.getElementById("fromOrgan");
     if(hkszd.value.length==0){
     	alert("请录入现户籍登记机关！");
-    	document.getElementById("hkszd").focus();
+    	document.getElementById("fromOrgan").focus();
     	return false;
     }
     //迁入地户籍登记机关
-    var nhkdjjgfj = document.getElementById("nhkdjjgfj");
+    var nhkdjjgfj = document.getElementById("toOrgan");
     if(nhkdjjgfj.value==0){
     	alert("请选择迁入地户籍登记机关！");
-    	document.getElementById("nhkdjjgfj").focus();
+    	document.getElementById("toOrgan").focus();
     	return false;
     }
     //迁入地户籍登记机关
-    var nhkdjjg = document.getElementById("nhkdjjg");
+    var nhkdjjg = document.getElementById("toPolicestation");
     if(nhkdjjg.value==1){
     	alert("请选择迁入地户籍登记机关！");
-    	document.getElementById("nhkdjjg").focus();
+    	document.getElementById("toPolicestation").focus();
     	return false;
     }
      
     //检测户口性质是否选择
-    var hkxz = document.getElementById("hkxz");
+    var hkxz = document.getElementById("fromProperty");
     if(hkxz.value==1){
     	alert("请选择户口性质！");
-    	document.getElementById("hkxz").focus();
+    	document.getElementById("fromProperty").focus();
     	return false;
     }
     
     //单位名称
-    var dwmc = document.getElementById("dwmc");
+    var dwmc = document.getElementById("companyName");
     if(dwmc.value.length==0){
     	alert("请录入单位名称！");
-    	document.getElementById("dwmc").focus();
+    	document.getElementById("companyName").focus();
     	return false;
     }
     
     //单位电话
-    var dwdh = document.getElementById("dwdh");
+    var dwdh = document.getElementById("companyTelephone");
     if(dwdh.value.length==0){
     	alert("请录入单位电话！");
-    	document.getElementById("dwdh").focus();
+    	document.getElementById("companyTelephone").focus();
     	return false;
     }
     
     //单位地址
-    var dwdz = document.getElementById("dwdz");
+    var dwdz = document.getElementById("companyAddress");
     if(dwdz.value.length==0){
     	alert("请录入现单位地址！");
-    	document.getElementById("dwdz").focus();
+    	document.getElementById("companyAddress").focus();
     	return false;
     }
     
     //本人电话
-    var lxdh = document.getElementById("lxdh");
+    var lxdh = document.getElementById("phone");
     if(lxdh.value.length==0){
     	alert("请录入本人电话！");
-    	document.getElementById("lxdh").focus();
+    	document.getElementById("phone").focus();
     	return false;
     }
     
     //现住址
-    var zz = document.getElementById("zz");
+    var zz = document.getElementById("fromAddress");
     if(zz.value.length==0){
     	alert("请录入迁入地详细地址！");
-    	document.getElementById("zz").focus();
+    	document.getElementById("fromAddress").focus();
     	return false;
     }
     
     //检测落户地区是否选择
-    var lhdq = document.getElementById("lhdq");
+    var lhdq = document.getElementById("toDistrict");
     if(lhdq.value==1){
     	alert("请选择拟落户地区！");
-    	document.getElementById("lhdq").focus();
+    	document.getElementById("toDistrict").focus();
     	return false;
     }
     
     //检测社保缴纳是否选择
-    var cjbx = document.getElementsByName("cjbx");
+    var cjbx = document.getElementsByName("hasSocialsecurity");
     var cjbx2=false;
     if(null!=cjbx){
 	    for(var i=0;i<cjbx.length;i++){
@@ -258,12 +258,12 @@
     }
     if(!cjbx2){
     	alert("请选择是否缴纳保险！");
-    	document.getElementById("cjbx").focus();
+    	document.getElementById("hasSocialsecurity").focus();
     	return false;
     }
     
     //检测积分期间有无行政拘留记是否选择
-    var hasjl = document.getElementsByName("hasJL");
+    var hasjl = document.getElementsByName("hasDetention");
     var hasjl2=false;
     if(null!=hasjl){
 	    for(var i=0;i<hasjl.length;i++){
@@ -274,15 +274,15 @@
     }
     if(!hasjl2){
     	alert("请选择积分期间有无行政拘留记录选择！");
-    	document.getElementById("hasJL").focus();
+    	document.getElementById("hasDetention").focus();
     	return false;
     }
     
     //检测居住证申领日期格式
-    if(!checkDate("cardregtime","")){ document.getElementById("cardregtime").focus();return false;}
+    if(!checkDate("residencePermitDate","")){ document.getElementById("residencePermitDate").focus();return false;}
     
     //检测积分期间有无犯罪获刑记录是否选择
-    var hasfz = document.getElementsByName("hasFZ");
+    var hasfz = document.getElementsByName("hasCriminal");
     var hasfz2=false;
     if(null!=hasfz){
 	    for(var i=0;i<hasfz.length;i++){
@@ -293,7 +293,7 @@
     }
     if(!hasfz2){
     	alert("请选择积分期间有无犯罪获刑记录！");
-    	document.getElementById("hasFZ").focus();
+    	document.getElementById("hasCriminal").focus();
     	return false;
     }
    	document.getElementById('pnumroles').value = pnum.roles;
@@ -700,16 +700,25 @@ function actionDeleteRoles() {
 	}
 }
 function createRoles(t, oid, personid, gx,xm,idcard, whcd) {
-	var tr = document.createElement('TR');
-	actionNewHidden(tr, t + 'oid', oid, pnum[t]);
-	actionNewHidden(tr, t + 'personid', personid, pnum[t]);
-	actionNewText(tr, t + 'gx', gx, pnum[t], '102px', 'left', '50');
-	actionNewText(tr, t + 'xm', xm, pnum[t], '102px', 'left', '10');
-	actionNewText(tr, t + 'idcard', idcard, pnum[t], '275px', 'center', '18');
-	actionNewText(tr, t + 'whcd', whcd, pnum[t], '102px', 'center', '20');
-	actionNewLink(tr, t + 'img','img/close.jpg','点击删除该亲属信息',actionDeleteRoles,t);
-	document.getElementById("roles").appendChild(tr);
-	pnum[t] += 1;
+  console.log($("#roles").find("tr").size());
+  var size=$("#roles").find("tr").size();
+  if(size<6)
+  {
+    var tr = document.createElement('TR');
+    actionNewHidden(tr, t + 'oid', oid, pnum[t]);
+    actionNewHidden(tr, t + 'personid', personid, pnum[t]);
+    actionNewText(tr,'relation', gx, size+1, '102px', 'left', '50');
+    actionNewText(tr,'relationName', xm, size+1, '102px', 'left', '10');
+    actionNewText(tr,'relationIDCard', idcard, size+1, '275px', 'center', '18');
+    actionNewText(tr,'relationdegree', whcd, size+1, '102px', 'center', '20');
+    actionNewLink(tr,'img','img/close.jpg','点击删除该亲属信息',actionDeleteRoles,t);
+    console.log(tr);
+    document.getElementById("roles").appendChild(tr);
+    pnum[t] += 1;
+  }else{
+    alert("最多只能填写六个联系人信息！");
+  }
+	
 }
 function newRoles(t) {
 	createRoles(t, '', '', '', '', '','');
@@ -751,8 +760,8 @@ function createRoles2(t, oid, personid, gx,xm,idcard, whcd) {
 //增加新的一行，并且选中第一个输入框
 function enterPrise3(){
 		newRoles('roles');//创建新的一行
-		document.getElementById("irolesgx0").focus();
-		document.getElementById("irolesgx0").select();
+		document.getElementById("irelation1").focus();
+		document.getElementById("irelation1").select();
 }
 //增加新的一行，并且选中第一个输入框
 function enterPrise4(){
