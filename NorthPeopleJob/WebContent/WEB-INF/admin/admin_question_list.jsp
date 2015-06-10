@@ -25,83 +25,117 @@
 
 
 <script type="text/javascript">
-        $(document).ready(function () {
-            var url = "<%=basePath%>/adminQuestionListAction";
+	$(document)
+			.ready(
+					function() {
+						var url = "adminQuestionListAction";
 
-				// prepare the data
-				var source = {
-					dataType : "json",
-					dataFields : [ {
-						name : 'sn',
-						type : 'string'
-					},{
-						name : 'id',
-						type : 'string'
-					}, {
-						name : 'question',
-						type : 'string'
-					}, {
-						name : 'type',
-						type : 'string'
-					} ],
-					id : 'id',
-					pageable : true,
-					pagerPosition : 'both',
-					url : url
-				};
+						// prepare the data
+						var source = {
+							dataType : "json",
+							dataFields : [ {
+								name : 'sn',
+								type : 'string'
+							}, {
+								name : 'id',
+								type : 'string'
+							}, {
+								name : 'question',
+								type : 'string'
+							}, {
+								name : 'type',
+								type : 'string'
+							} ],
+							id : 'id',
+							pageable : true,
+							pagerPosition : 'both',
+							url : url
+						};
 
-				var dataAdapter = new $.jqx.dataAdapter(source);
+						var dataAdapter = new $.jqx.dataAdapter(source);
 
-				$("#dataTable").jqxDataTable({
-					width : 600,
-					pageable : true,
-					pagerButtonsCount : 10,
-					source : dataAdapter,
-					columnsResize : true,
-					selectionMode : 'singleRow',
-					columns : [ {
-						text : '题目编号',
-						dataField : 'id',
-						width : 100
-					}, {
-						text : '题目题干',
-						dataField : 'question',
-						width : 300
-					}, {
-						text : '题目类型',
-						dataField : 'type',
-						width : 200
-					} ]
-				});
-				$("#dataTable").jqxDataTable({
-					pagerMode : "advanced"
-				});
-				$("#myQueryButton").jqxButton({
-					height : 35,width : 80
-				});
-				$("#myEditButton").jqxButton({
-					height : 35,width : 80
-				});
-				$("#myEditButton").bind(
-						'click',
-						function() {
-							var selection = $("#dataTable").jqxDataTable(
-									'getSelection');
-							if (selection.length == 0) {
-								alert("请先选择需要操作的行!");
-							} else {
-								window.location.href = 'adminQuestionEditPage?id='
-										+ selection[0]['id']+'&sn='+ selection[0]['sn'];
-							}
+						$("#dataTable").jqxDataTable({
+							width : 600,
+							pageable : true,
+							pagerButtonsCount : 10,
+							source : dataAdapter,
+							columnsResize : true,
+							selectionMode : 'singleRow',
+							columns : [ {
+								text : '题目编号',
+								dataField : 'id',
+								width : 100
+							}, {
+								text : '题目题干',
+								dataField : 'question',
+								width : 300
+							}, {
+								text : '题目类型',
+								dataField : 'type',
+								width : 200
+							} ]
 						});
-			});
+						$("#dataTable").jqxDataTable({
+							pagerMode : "advanced"
+						});
+						$("#myAddButton").jqxButton({
+							height : 35,
+							width : 80
+						});
+						$("#myEditButton").jqxButton({
+							height : 35,
+							width : 80
+						});
+						$("#myDeleteButton").jqxButton({
+							height : 35,
+							width : 80
+						});
+						$("#myEditButton")
+								.bind(
+										'click',
+										function() {
+											var selection = $("#dataTable")
+													.jqxDataTable(
+															'getSelection');
+											if (selection.length == 0) {
+												alert("请先选择需要操作的行!");
+											} else {
+												window.location.href = 'adminQuestionEditPage?id='
+														+ selection[0]['id']
+														+ '&sn='
+														+ selection[0]['sn'];
+											}
+										});
+
+						$("#myAddButton").bind('click', function() {
+
+							window.location.href = 'adminQuestionAddPage';
+
+						});
+						$("#myDeleteButton")
+								.bind(
+										'click',
+										function() {
+											var selection = $("#dataTable")
+											.jqxDataTable(
+													'getSelection');
+									if (selection.length == 0) {
+										alert("请先选择需要操作的行!");
+									} else {
+										window.location.href = 'adminQuestionDeleteAction?id='
+												+ selection[0]['id'];
+									}
+
+										});
+					});
 </script>
 </head>
 <body class='default'>
 	<div id="dataTable"></div>
 	<div id="myMenu" style="margin-top: 20px">
-		<button id="myQueryButton">查询</button>
+		<button id="myAddButton">新增</button>
 		<button id="myEditButton">编辑</button>
+		<button id="myDeleteButton">删除</button>
 	</div>
 </body>
 </html>

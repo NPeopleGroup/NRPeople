@@ -5,65 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="./js/jquery.js"></script>
-
-<style type="text/css">
-.normal_label {
-	color: rgb(30, 32, 34); cursor: default; display: block; font-family: Helvetica, Verdana; font-size: 13px; height: 34px; padding-bottom: 2px;
-	padding-left: 2px; padding-right: 2px; padding-top: 2px; white-space: normal; width: 120px; border-style: none; float: left; line-height: 34px;
-}
-
-.normal_input {
-	color: rgb(30, 32, 34); cursor: default; display: block; font-family: Helvetica, Verdana; font-size: 13px; height: 34px; padding-bottom: 2px;
-	padding-left: 2px; padding-right: 2px; padding-top: 2px; white-space: normal; width: 160px; border: 1px solid #a4bed4; float: left;
-}
-
-.normal_select {
-	color: rgb(30, 32, 34); cursor: default; display: block; font-family: Helvetica, Verdana; font-size: 13px; height: 34px; padding-bottom: 2px;
-	padding-left: 2px; padding-right: 2px; padding-top: 2px; white-space: normal; width: 160px; border: 1px solid #a4bed4; float: left;
-}
-
-.normal_checkbox {
-	height: 30px; line-height: 30px; padding: 8px;
-}
-
-.form_item {
-	width: 310px; height: 40px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;
-}
-
-.normal_button {
-	-webkit-align-items: flex-start; -webkit-appearance: none; -webkit-background-clip: border-box; -webkit-background-origin: padding-box;
-	-webkit-background-size: auto; -webkit-box-shadow: rgb(255, 255, 255) 0px 1px 1px 0px inset; -webkit-rtl-ordering: logical;
-	-webkit-user-select: text; -webkit-writing-mode: horizontal-tb; background-attachment: scroll;
-	background-image: -webkit-linear-gradient(top, rgb(234, 243, 255) 0px, rgb(229, 241, 255) 50%, rgb(214, 232, 255) 100%);
-	background-position: 0px 1px; background-repeat: repeat-x; border-bottom-color: rgb(164, 190, 212); border-bottom-style: solid;
-	border-bottom-width: 1px; border-left-color: rgb(164, 190, 212); border-left-style: solid; border-left-width: 1px;
-	border-right-color: rgb(164, 190, 212); border-right-style: solid; border-right-width: 1px; border-top-color: rgb(164, 190, 212);
-	border-top-style: solid; border-top-width: 1px; color: rgb(30, 32, 34); height: 35px; letter-spacing: normal; line-height: normal; float: left;
-	padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px; text-transform: none;
-	white-space: pre; width: 100px; margin-right: 20px; word-spacing: 0px; letter-spacing: normal; line-height: normal; float: left; padding-bottom: 0px;
-	padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px; text-transform: none; line-height: normal;
-	float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px;
-	text-transform: none; float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center;
-	text-indent: 0px; text-transform: none; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px;
-	text-transform: none; white-space: pre; width: 100px; margin-right: 20px; word-spacing: 0px; letter-spacing: normal; line-height: normal;
-	float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px;
-	text-transform: none; line-height: normal; float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;
-	text-align: center; text-indent: 0px; text-transform: none; float: left; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px;
-	text-transform: none; white-space: pre; width: 100px; margin-right: 20px; word-spacing: 0px; letter-spacing: normal; line-height: normal;
-	float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px;
-	text-transform: none; line-height: normal; float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;
-	text-align: center; text-indent: 0px; text-transform: none; float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px;
-	padding-top: 0px; text-align: center; text-indent: 0px; text-transform: none; padding-left: 0px; padding-right: 0px; padding-top: 0px;
-	text-align: center; text-indent: 0px; text-transform: none; white-space: pre; width: 100px; margin-right: 20px; word-spacing: 0px;
-	letter-spacing: normal; line-height: normal; padding-top: 0px; text-align: center; text-indent: 0px; text-transform: none; white-space: pre;
-	width: 100px; margin-right: 20px; word-spacing: 0px; letter-spacing: normal; line-height: normal; float: left; padding-bottom: 0px;
-	padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px; text-transform: none; line-height: normal;
-	float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px;
-	text-transform: none; float: left; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center;
-	text-indent: 0px; text-transform: none; padding-left: 0px; padding-right: 0px; padding-top: 0px; text-align: center; text-indent: 0px;
-	text-transform: none; white-space: pre; width: 100px; margin-right: 20px; word-spacing: 0px; letter-spacing: normal; line-height: normal;
-}
-</style>
+<link rel="stylesheet" href="./css/admin-question.css" >
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("[name='type']").val("${question.type}");
