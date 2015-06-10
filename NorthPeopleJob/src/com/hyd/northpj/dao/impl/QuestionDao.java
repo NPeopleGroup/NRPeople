@@ -11,7 +11,7 @@ import com.hyd.northpj.entity.Question;
 import com.hyd.northpj.util.HibernateSessionFactory;
 
 public class QuestionDao implements QuestionDaoInterface {
-    
+
 	private Session session = HibernateSessionFactory.getSession();
 	private Transaction tx = session.beginTransaction();
 	private Query query;
@@ -19,15 +19,16 @@ public class QuestionDao implements QuestionDaoInterface {
 	@Override
 	public List<Question> selectQuestionList() throws Exception {
 		// TODO Auto-generated method stub
-		query=session.createQuery("from Question");
+		query = session.createQuery("from Question");
 		@SuppressWarnings("unchecked")
-		List<Question> questionList=query.list();
+		List<Question> questionList = query.list();
 		return questionList;
 	}
 
 	@Override
 	public int insertQuestion(Question question) throws Exception {
 		// TODO Auto-generated method stub
+		session.clear();
 		session.save(question);
 		tx.commit();
 		session.close();
@@ -37,10 +38,9 @@ public class QuestionDao implements QuestionDaoInterface {
 	@Override
 	public Question selectQuestion(String id) throws Exception {
 		// TODO Auto-generated method stub
-		query = session.createQuery("from Question where id="
-				+ id);
+		query = session.createQuery("from Question where id='" + id + "'");
 		@SuppressWarnings("unchecked")
-		List<Question> Question =	query.list();
+		List<Question> Question = query.list();
 		for (Question tempQuestion : Question) {
 			return tempQuestion;
 		}
@@ -51,9 +51,13 @@ public class QuestionDao implements QuestionDaoInterface {
 
 	@Override
 	public int updateQuestion(Question question) throws Exception {
+
 		// TODO Auto-generated method stub
-		question=(Question)session.get(Question.class, question.getSn());
-		session.save(question);
+		// System.out.println("updateQuestion:"+question.getSn()+question.getId());
+		//
+		// question = (Question) session.get(Question.class, question.getSn());
+		session.clear();
+		session.update(question);
 		tx.commit();
 		session.close();
 		return 0;
@@ -62,21 +66,20 @@ public class QuestionDao implements QuestionDaoInterface {
 	@Override
 	public int deleteQuestion(String id) throws Exception {
 		// TODO Auto-generated method stub
-		query = session.createQuery("from Question where id="
-				+ id);
+		query = session.createQuery("from Question where id=" + id);
 		@SuppressWarnings("unchecked")
-		List<Question> list=query.list();
-		for(Question Question:list){
+		List<Question> list = query.list();
+		for (Question Question : list) {
 			session.delete(Question);
 		}
-		tx.commit();	
-	    session.close();
+		tx.commit();
+		session.close();
 		return 0;
 	}
-	//public static void main(String[] args) throws Exception{
-	//	QuestionDao qd=new QuestionDao();
-	//	Question q=new Question();
-	//	qd.deleteQuestion("3");
-//	}
+	// public static void main(String[] args) throws Exception{
+	// QuestionDao qd=new QuestionDao();
+	// Question q=new Question();
+	// qd.deleteQuestion("3");
+	// }
 
 }
