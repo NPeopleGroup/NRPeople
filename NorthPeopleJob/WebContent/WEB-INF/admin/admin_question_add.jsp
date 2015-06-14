@@ -47,7 +47,7 @@
 </head>
 <body>
 
-	<form id="login" method="post" action="adminQuestionAddAction">
+	<form id="login" method="post" enctype="multipart/form-data" action="adminQuestionAddAction">
 		<div style="float: left; width: 33%; height: 100%">
 			<div class="form_item">
 				<label class="normal_label">问题编号:</label> <input type="text"
@@ -74,6 +74,12 @@
 					<option value="工作年限">守法诚信</option>
 				</select>
 			</div>
+			<div class="form_item">
+				<label class="normal_label">问题图片:</label> <input type="file"
+					name="image" class="normal_input" />
+			</div>
+
+
 			<div class="form_item">
 				<button type="submit" class="normal_button">确认</button>
 			</div>
