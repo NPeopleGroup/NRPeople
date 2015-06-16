@@ -7,7 +7,6 @@ import org.apache.struts2.ServletActionContext;
 
 import com.hyd.northpj.entity.Question;
 import com.hyd.northpj.service.impl.QuestionService;
-import com.opensymphony.xwork2.ActionContext;
 
 public class AdminQuestionAddAction extends ModelAction<Question> {
 
@@ -22,24 +21,22 @@ public class AdminQuestionAddAction extends ModelAction<Question> {
 	}
 
 	private File image; // 上传的文件
-	private String imageFileName; // 文件名称
 	private String imageContentType; // 文件类型
 
 	public String execute() throws Exception {
 
-		String realpath = ServletActionContext.getServletContext().getRealPath(
-				"/img");
-		System.out.println(realpath);		
-		System.out.println(image);
 		try {
 
 			if (image != null) {
-				File savefile = new File(new File(realpath), imageFileName);
+				String realpath = ServletActionContext.getServletContext()
+						.getRealPath("/img");
+				File savefile = new File(new File(realpath), "quesiton-"
+						+ question.getId() + "."
+						+ imageContentType.replace("image/", ""));
 				if (!savefile.getParentFile().exists())
 					savefile.getParentFile().mkdirs();
 				FileUtils.copyFile(image, savefile);
-				ActionContext.getContext().put("message", "文件上传成功");
-				System.out.println("文件上传成功");
+
 			}
 
 			QuestionService questionService = new QuestionService();
@@ -62,14 +59,6 @@ public class AdminQuestionAddAction extends ModelAction<Question> {
 
 	public void setImage(File image) {
 		this.image = image;
-	}
-
-	public String getImageFileName() {
-		return imageFileName;
-	}
-
-	public void setImageFileName(String imageFileName) {
-		this.imageFileName = imageFileName;
 	}
 
 	public String getImageContentType() {

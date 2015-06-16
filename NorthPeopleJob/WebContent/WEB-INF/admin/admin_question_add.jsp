@@ -10,8 +10,15 @@
 	type="text/css" />
 <script type="text/javascript" src="./js/jqwidgets/jqxcore.js"></script>
 <script type="text/javascript" src="./js/jqwidgets/jqxtabs.js"></script>
+<script type="text/javascript" src="js/jqwidgets/jqxbuttons.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
+		
+		
+		$(".normal_button").jqxButton({
+			height : 35,
+			width : 80
+		});
 		// Create jqxTabs.
 		$('#jqxTabs').jqxTabs({
 			width : '90%',
@@ -47,7 +54,8 @@
 </head>
 <body>
 
-	<form id="login" method="post" enctype="multipart/form-data" action="adminQuestionAddAction">
+	<form id="login" method="post" enctype="multipart/form-data"
+		action="adminQuestionAddAction">
 		<div style="float: left; width: 33%; height: 100%">
 			<div class="form_item">
 				<label class="normal_label">问题编号:</label> <input type="text"
@@ -296,30 +304,8 @@
 							name="hintD" class="normal_input" />
 					</div>
 				</div>
-
 			</div>
-
-
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
-
-
-
-
-
 	</form>
 
 </body>
