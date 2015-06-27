@@ -9,23 +9,35 @@ import org.hibernate.Transaction;
 
 import com.hyd.northpj.dao.interfaces.AnswerDaoInterface;
 import com.hyd.northpj.entity.Answer;
+import com.hyd.northpj.entity.Question;
 import com.hyd.northpj.model.EvaluationFile;
 import com.hyd.northpj.model.EvaluationScore;
 import com.hyd.northpj.util.HibernateSessionFactory;
 
 public class AnswerDao implements AnswerDaoInterface {
-     
+
 	private Session session = HibernateSessionFactory.getSession();
 	private Transaction tx = session.beginTransaction();
-	Query query=null;
+	Query query = null;
+
 	@Override
 	public int insertAnswer(Answer answer) throws Exception {
+
+		query = session.createQuery("from Answer where questionId="
+				+ answer.getQuestionId() + " and username="
+				+ answer.getUsername());
+		@SuppressWarnings("unchecked")
+		List<Answer> list = query.list();
+		for (Answer Answer : list) {
+			session.delete(Answer);
+		}
+
 		// TODO Auto-generated method stub
-		session.save(answer);   
+		session.save(answer);
 		tx.commit();
 		session.close();
 		return 0;
-	
+
 	}
 
 	@Override

@@ -66,14 +66,21 @@ public class QuestionDao implements QuestionDaoInterface {
 	@Override
 	public int deleteQuestion(String id) throws Exception {
 		// TODO Auto-generated method stub
-		query = session.createQuery("from Question where id=" + id);
-		@SuppressWarnings("unchecked")
-		List<Question> list = query.list();
-		for (Question Question : list) {
-			session.delete(Question);
-		}
-		tx.commit();
-		session.close();
+		// query = session.createQuery("delete Question where id=" + id);
+		// @SuppressWarnings("unchecked")
+		// List<Question> list = query.list();
+		// for (Question Question : list) {
+		// session.delete(Question);
+		// }
+		// tx.commit();
+		// session.close();
+
+		String hql = "delete Question as p where p.id=?";
+		Query query = session.createQuery(hql);
+		query.setString(0, id);
+		query.executeUpdate();
+		session.beginTransaction().commit();
+
 		return 0;
 	}
 	// public static void main(String[] args) throws Exception{

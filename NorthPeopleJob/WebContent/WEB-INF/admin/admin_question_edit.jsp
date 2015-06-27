@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -13,7 +14,6 @@
 <script type="text/javascript" src="js/jqwidgets/jqxbuttons.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		// Create jqxTabs.
 		$(".normal_button").jqxButton({
 			height : 35,
 			width : 80
@@ -50,34 +50,92 @@
 	$(document).ready(function() {
 		$("[name='type']").val("${question.type}");
 
-		if ("${question.activationA}" == "1") {
+		if ("${question.activationA}" == "on") {
 			$("[name='activationA']").attr("checked", 'true');
 		}
 
 		$("[name='objectiveA']").val("${question.objectiveA}");
 		$("[name='gotoA']").val("${question.gotoA}");
 
-		if ("${question.activationB}" == "1") {
+		if ("${question.activationB}" == "on") {
 			$("[name='activationB']").attr("checked", 'true');
 		}
 
 		$("[name='objectiveB']").val("${question.objectiveB}");
 		$("[name='gotoB']").val("${question.gotoB}");
 
-		if ("${question.activationC}" == "1") {
+		if ("${question.activationC}" == "on") {
 			$("[name='activationC']").attr("checked", 'true');
 		}
 		$("[name='objectiveC']").val("${question.objectiveC}");
 		$("[name='gotoC']").val("${question.gotoC}");
 
-		if ("${question.activationD}" == "1") {
+		if ("${question.activationD}" == "on") {
 			$("[name='activationD']").attr("checked", 'true');
 		}
 		$("[name='objectiveD']").val("${question.objectiveD}");
 		$("[name='gotoD']").val("${question.gotoD}");
 	});
 </script>
+<script type="text/javascript">
+	function previewImage(file) {
+		var MAXWIDTH = 300;
+		var MAXHEIGHT = 210;
+		var div = document.getElementById('preview');
+		if (file.files && file.files[0]) {
+			div.innerHTML = '<img id=imghead>';
+			var img = document.getElementById('imghead');
+			img.onload = function() {
+				var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, MAXWIDTH,
+						MAXHEIGHT);
+				img.width = rect.width;
+				img.height = rect.height;
+				img.style.marginTop = rect.top + 'px';
+			}
+			var reader = new FileReader();
+			reader.onload = function(evt) {
+				img.src = evt.target.result;
+			}
+			reader.readAsDataURL(file.files[0]);
+		} else {
+			var sFilter = 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+			file.select();
+			var src = document.selection.createRange().text;
+			div.innerHTML = '<img id=imghead>';
+			var img = document.getElementById('imghead');
+			img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+			var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth,
+					img.offsetHeight);
+			status = ('rect:' + rect.top + ',' + rect.left + ',' + rect.width
+					+ ',' + rect.height);
+			div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+		}
+	}
+	function clacImgZoomParam(maxWidth, maxHeight, width, height) {
+		var param = {
+			top : 0,
+			left : 0,
+			width : width,
+			height : height
+		};
+		if (width > maxWidth || height > maxHeight) {
+			rateWidth = width / maxWidth;
+			rateHeight = height / maxHeight;
 
+			if (rateWidth > rateHeight) {
+				param.width = maxWidth;
+				param.height = Math.round(height / rateWidth);
+			} else {
+				param.width = Math.round(width / rateHeight);
+				param.height = maxHeight;
+			}
+		}
+
+		param.left = Math.round((maxWidth - param.width) / 2);
+		param.top = Math.round((maxHeight - param.height) / 2);
+		return param;
+	}
+</script>
 </head>
 <body>
 	<form id="login" method="post" enctype="multipart/form-data"
@@ -112,10 +170,11 @@
 			</div>
 			<div class="form_item">
 				<label class="normal_label">问题图片:</label> <input type="file"
-					name="image" class="normal_input" />
+					name="image" class="normal_input" onchange="previewImage(this)"/>
 			</div>
-
-
+			<div class="form_item" id="preview" style="height:210px">
+				<img src="img/question-${question.id}.png" width="300" height="210" id="imghead"/>				
+			</div>
 			<div class="form_item">
 				<button type="submit" class="normal_button">确认</button>
 			</div>
@@ -138,13 +197,10 @@
 							name="choiceA" class="normal_input" value="${question.choiceA}" />
 					</div>
 					<div class="form_item">
-						<label class="normal_label">选项A转向</label> <select name="gotoA"
-							class="normal_select">
-							<option value="gotoA">gotoA</option>
-							<option value="gotoB">gotoB</option>
-							<option value="gotoC">gotoC</option>
-							<option value="gotoD">gotoD</option>
-						</select>
+						<label class="normal_label">选项A转向</label>
+						<s:select name="gotoA" cssClass="normal_select" list="gotoList"
+							listKey="id" listValue="id">
+						</s:select>
 					</div>
 					<div class="form_item">
 						<label class="normal_label">选项A分数</label> <input type="text"
@@ -191,13 +247,11 @@
 							name="choiceB" class="normal_input" value="${question.choiceB}" />
 					</div>
 					<div class="form_item">
-						<label class="normal_label">选项B转向</label> <select name="gotoB"
-							class="normal_select">
-							<option value="gotoA">gotoA</option>
-							<option value="gotoB">gotoB</option>
-							<option value="gotoC">gotoC</option>
-							<option value="gotoD">gotoD</option>
-						</select>
+						<label class="normal_label">选项B转向</label>
+
+						<s:select name="gotoB" cssClass="normal_select" list="gotoList"
+							listKey="id" listValue="id">
+						</s:select>
 					</div>
 					<div class="form_item">
 						<label class="normal_label">选项B分数</label> <input type="text"
@@ -244,13 +298,10 @@
 							name="choiceC" class="normal_input" value="${question.choiceC}" />
 					</div>
 					<div class="form_item">
-						<label class="normal_label">选项C转向</label> <select name="gotoC"
-							class="normal_select">
-							<option value="gotoA">gotoA</option>
-							<option value="gotoB">gotoB</option>
-							<option value="gotoC">gotoC</option>
-							<option value="gotoD">gotoD</option>
-						</select>
+						<label class="normal_label">选项C转向</label>
+						<s:select name="gotoC" cssClass="normal_select" list="gotoList"
+							listKey="id" listValue="id">
+						</s:select>
 					</div>
 					<div class="form_item">
 						<label class="normal_label">选项C分数</label> <input type="text"
@@ -297,13 +348,10 @@
 							name="choiceD" class="normal_input" value="${question.choiceD}" />
 					</div>
 					<div class="form_item">
-						<label class="normal_label">选项D转向</label> <select name="gotoD"
-							class="normal_select">
-							<option value="gotoA">gotoA</option>
-							<option value="gotoB">gotoB</option>
-							<option value="gotoC">gotoC</option>
-							<option value="gotoD">gotoD</option>
-						</select>
+						<label class="normal_label">选项D转向</label>
+						<s:select name="gotoD" cssClass="normal_select" list="gotoList"
+							listKey="id" listValue="id">
+						</s:select>
 					</div>
 					<div class="form_item">
 						<label class="normal_label">选项D分数</label> <input type="text"

@@ -48,7 +48,7 @@
 			<result type="json">
 			</result>
 		</action>
-		<action name="adminQuestionAddPage">
+		<action name="adminQuestionAddPage" class="com.hyd.northpj.action.AdminQuestionAddPageAction">
 			<result name="success">/WEB-INF/admin/admin_question_add.jsp</result>
 		</action>
 		<action name="adminQuestionAddAction" class="com.hyd.northpj.action.AdminQuestionAddAction">
@@ -65,7 +65,14 @@
 			<result name="success" type="redirect">adminQuestionListPage</result>
 		</action>
 
-
+		<!-- 答题页面的一系列Action -->
+		<action name="answerQuestionPage" class="com.hyd.northpj.action.AnswerQuestionPageAction">
+			<result name="success">answerQuestionPage.jsp</result>
+		</action>
+		<action name="answerQuestionPageSubmit" class="com.hyd.northpj.action.AnswerQuestionPageSubmitAction">
+			<result name="success" type="redirect">answerQuestionPage?id=${nextId}</result>
+		</action>
+	
 
 
 
