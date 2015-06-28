@@ -31,8 +31,7 @@ public class AdminQuestionAddAction extends ModelAction<Question> {
 				String realpath = ServletActionContext.getServletContext()
 						.getRealPath("/img");
 				File savefile = new File(new File(realpath), "question-"
-						+ question.getId() + "."
-						+ imageContentType.replace("image/", ""));
+						+ question.getId() + ".png");
 				if (!savefile.getParentFile().exists())
 					savefile.getParentFile().mkdirs();
 				FileUtils.copyFile(image, savefile);

@@ -187,23 +187,23 @@ body {
 				<img alt="" src="./img/home/percent75.png">
 			</div>
 			<div id="process1">
-				<a href="www.baidu.com"><img alt=""
+				<a href="answerQuestionPage?id=001"><img alt=""
 					src="./img/home/process1_unfinished.png"></a>
 			</div>
 			<div id="process2">
-				<a href="www.baidu.com"><img alt=""
+				<a href="checkScorePage"><img alt=""
 					src="./img/home/process2_unfinished.png"></a>
 			</div>
 			<div id="process3">
-				<a href="www.baidu.com"><img alt=""
+				<a href="checkFilePage"><img alt=""
 					src="./img/home/process3_unfinished.png"></a>
 			</div>
 			<div id="process4">
-				<a href="www.baidu.com"><img alt=""
+				<a href="para.jsp"><img alt=""
 					src="./img/home/process4_unfinished.png"></a>
 			</div>
 			<div id="process5">
-				<a href="www.baidu.com"><img alt=""
+				<a href="checkStatusPage"><img alt=""
 					src="./img/home/process5_unfinished.png"></a>
 			</div>
 		</div>

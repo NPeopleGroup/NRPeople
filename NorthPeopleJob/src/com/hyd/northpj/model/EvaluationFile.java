@@ -1,18 +1,32 @@
 package com.hyd.northpj.model;
 
 public class EvaluationFile {
-	private String file;
-	private String department;
-	public String getFile() {
-		return file;
+	private String questionFile;
+	private String questionDepartment;
+	private String questionHint;
+
+	public String getQuestionFile() {
+		return questionFile;
 	}
-	public void setFile(String file) {
-		this.file = file;
+
+	public void setQuestionFile(String questionFile) {
+		this.questionFile = questionFile;
 	}
-	public String getDepartment() {
-		return department;
+
+	public String getQuestionDepartment() {
+		return questionDepartment;
 	}
-	public void setDepartment(String department) {
-		this.department = department;
+
+	public void setQuestionDepartment(String questionDepartment) {
+		this.questionDepartment = questionDepartment;
 	}
+
+	public String getQuestionHint() {
+		return questionHint;
+	}
+
+	public void setQuestionHint(String questionHint) {
+		this.questionHint = questionHint;
+	}
+
 }

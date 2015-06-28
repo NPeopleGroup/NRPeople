@@ -10,6 +10,16 @@
 		<property name="username" column="username" />
 		<property name="questionId" column="questionId" />
 		<property name="answer" column="answer" />		
+		<property name="questionSn" column="questionSn" />
+		<property name="questionQuestion" column="questionQuestion" />
+		<property name="questionType" column="questionType" />
+		<property name="questionChoice" column="questionChoice" />
+		<property name="questionGoto" column="questionGoto" />
+		<property name="questionScore" column="questionScore" />
+		<property name="questionObjective" column="questionObjective" />
+		<property name="questionFile" column="questionFile" />
+		<property name="questionDepartment" column="questionDepartment" />
+		<property name="questionHint" column="questionHint" />
 	</class>
 </hibernate-mapping>
   

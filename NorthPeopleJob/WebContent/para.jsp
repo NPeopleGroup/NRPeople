@@ -35,7 +35,7 @@
 									<table width="758" border="0" cellspacing="0" cellpadding="0">
 
 										<tbody>
-											<tr>
+											<!--<tr>
 												<td height="49" colspan="6" align="center" valign="middle" background="./img/t1-3-2.jpg">
 													<table width="758" border="0" cellspacing="0" cellpadding="0">
 														<tbody>
@@ -65,6 +65,7 @@
 											<tr>
 												<td height="5" colspan="6" bgcolor="#F5F9FC"></td>
 											</tr>
+											-->
 											<tr>
 												<td height="25" colspan="6" align="center" valign="middle" bgcolor="#E4EDF2" class="jzzzl_box_main_font_01">
 													基本信息 <font color="#FF0000">（红色标注项为必填项）</font>

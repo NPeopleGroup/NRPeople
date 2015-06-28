@@ -12,8 +12,9 @@
 	$(function() {
 		if (window.innerHeight) {
 			winHeight = window.innerHeight;
-			$(".question-box").css("margin-top",
-					(winHeight - 70 - 150 - 452) / 3);
+			/* 			$(".question-box").css("margin-top",
+			 (winHeight - 70 - 150 - 452) / 3); */
+			$(".question-box").css("margin-top", 10);
 			$(".question-box").css("margin-bottom",
 					(winHeight - 70 - 150 - 452) / 3 * 2);
 		}
@@ -63,11 +64,9 @@
 			$("#option_a_li").hide();
 		}
 
-
 		if ("${question.activationB}" != "on") {
 			$("#option_b_li").hide();
 		}
-
 
 		if ("${question.activationC}" != "on") {
 			$("#option_c_li").hide();
@@ -82,39 +81,59 @@
 
 </head>
 <body>
+
 	<form id="answerQuestion" method="post" enctype="multipart/form-data"
 		action="answerQuestionPageSubmit">
 		<input type="text" name="id" value="${question.id}"
 			style="display: none" />
-		<div class="question-box">
-			<div class="question-box-title">天津市积分落户自助测评</div>
-			<div class="question-box-line">
-				<div class="question-box-line-fill"></div>
-			</div>
-			<div class="question-box-question">
-				<div class="question-box-text">
-					<div class="question-box-stem">${question.question}</div>
-					<div class="question-box-option">
-						<ul>
-							<li id="option_a_li"><i></i> <input type="radio"
-								name="option" value="A_${question.gotoA}" checked="true"> A. ${question.choiceA}</li>
-							<li id="option_b_li"><i></i> <input type="radio"
-								name="option" value="B_${question.gotoB}"> B. ${question.choiceB}</li>
-							<li id="option_c_li"><i></i> <input type="radio"
-								name="option" value="C_${question.gotoC}"> C. ${question.choiceC}</li>
-							<li id="option_d_li"><i></i> <input type="radio"
-								name="option" value="D_${question.gotoD}"> D. ${question.choiceD}</li>
-						</ul>
+		<div style="width: 990px; margin: 0 auto;">
+			<div class="type-box">年&nbsp;&nbsp;&nbsp;&nbsp;龄</div>
+			<div class="type-box">教&nbsp;&nbsp;&nbsp;&nbsp;育</div>
+			<div class="type-box">技&nbsp;&nbsp;&nbsp;&nbsp;能</div>
+			<div class="type-box">住&nbsp;&nbsp;&nbsp;&nbsp;房</div>
+			<div class="type-box">社&nbsp;&nbsp;&nbsp;&nbsp;保</div>
+			<div class="type-box">落户地区</div>
+			<div class="type-box">职&nbsp;&nbsp;&nbsp;&nbsp;业</div>
+			<div class="type-box">投资纳税</div>
+			<div class="type-box">奖项荣誉</div>
+			<div class="type-box">婚姻状况</div>
+			<div class="type-box">工作年限</div>
+
+			<div class="type-box">守法诚信</div>
+			<div class="question-box">
+				<div class="question-box-title">天津市积分落户自助测评</div>
+				<div class="question-box-line">
+					<div class="question-box-line-fill"></div>
+				</div>
+				<div class="question-box-question">
+					<div class="question-box-text">
+						<div class="question-box-stem">${question.question}</div>
+						<div class="question-box-option">
+							<ul>
+								<li id="option_a_li"><i></i> <input type="radio"
+									name="option" value="A_${question.gotoA}" checked="true">
+									A. ${question.choiceA}</li>
+								<li id="option_b_li"><i></i> <input type="radio"
+									name="option" value="B_${question.gotoB}"> B.
+									${question.choiceB}</li>
+								<li id="option_c_li"><i></i> <input type="radio"
+									name="option" value="C_${question.gotoC}"> C.
+									${question.choiceC}</li>
+								<li id="option_d_li"><i></i> <input type="radio"
+									name="option" value="D_${question.gotoD}"> D.
+									${question.choiceD}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="question-box-picture">
+						<img src="img/question-${question.id}.png" width="400"
+							height="280" />
 					</div>
 				</div>
-				<div class="question-box-picture">
-					<img src="img/question-${question.id}.png" width="400" height="280" />
-				</div>
+				<input class="question-box-submit" value="下一题" type="submit"></input>
+				<div class="question-box-progress"></div>
 			</div>
-			<input class="question-box-submit" value="下一题" type="submit"></input>
-			<div class="question-box-progress"></div>
 		</div>
-
 	</form>
 </body>
 </html>

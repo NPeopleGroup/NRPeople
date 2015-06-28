@@ -1,22 +1,20 @@
 package com.hyd.northpj.model;
 
 public class EvaluationScore {
-	private String type;
-	private String score;
-
-	public String getType() {
-		return type;
+	private String questionType;
+	private String questionScore;
+	public String getQuestionType() {
+		return questionType;
+	}
+	public void setQuestionType(String questionType) {
+		this.questionType = questionType;
+	}
+	public String getQuestionScore() {
+		return questionScore;
+	}
+	public void setQuestionScore(String questionScore) {
+		this.questionScore = questionScore;
 	}
 
-	public void setType(String type) {
-		this.type = type;
-	}
 
-	public String getScore() {
-		return score;
-	}
-
-	public void setScore(String score) {
-		this.score = score;
-	}
 }
