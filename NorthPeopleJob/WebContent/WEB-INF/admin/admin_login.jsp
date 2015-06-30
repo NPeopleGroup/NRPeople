@@ -15,6 +15,7 @@
 
 		$("#login").addClass("current");
 		$("#login").fadeIn("fast");
+		
 		// 获取页面文档的高度
 		var docheight = $(window).height();
 		// 追加一个层，使背景变灰
