@@ -4,6 +4,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <filter>
+  	<filter-name>loginFilter</filter-name>
+  	<filter-class>com.hyd.northpj.util.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>loginFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
     <filter>
         <filter-name>struts2</filter-name>
         <filter-class>

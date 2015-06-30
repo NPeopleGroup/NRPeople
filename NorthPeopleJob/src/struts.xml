@@ -4,8 +4,8 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<package name="actions" extends="struts-default,json-default"
-		namespace="/">
+	<include file="struts_adminuser.xml"></include>
+	<package name="actions" extends="struts-default,json-default" namespace="/">
 		<action name="RegisterAction" class="com.hyd.northpj.action.RegisterAction">
 			<result name="success">home.jsp
 			</result>
@@ -20,13 +20,13 @@
 		</action>
 		<!-- 此处需要修改 -->
 		<action name="AdminLoginAction" class="com.hyd.northpj.action.AdminLoginAction">
-			<result name="success">adminQuestionListPage
+			<result name="success">/WEB-INF/admin/admin_index.jsp
 			</result>
 			<result name="input">adminQuestionListPage
 			</result>
 		</action>
 		<action name="adminManager">
-			<result name="success">adminQuestionListPage</result>
+			<result name="success">/WEB-INF/admin/admin_index.jsp</result>
 		</action>
 		<!-- <action name="admin_view_*"> <result name="success">/WEB-INF/admin/admin_view_{1}.jsp</result> 
 			</action> -->
