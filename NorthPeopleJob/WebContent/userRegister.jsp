@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>注册</title>
+	<title>用户注册界面</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link href="css/register.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 					<tbody>
 						<tr>
 							<td width="758">
-								<form name="submitForm" method="post" action="getPara">
+								<form name="submitForm" method="post" action="userRegister">
 									<input type="hidden" value="4508439" name="regId" id="regId">
 									<input type="hidden" value="20151022470" name="regNo">
 									<input type="hidden" name="pnumroles" id="pnumroles">

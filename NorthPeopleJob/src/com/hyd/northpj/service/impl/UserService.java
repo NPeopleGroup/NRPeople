@@ -76,8 +76,7 @@ public class UserService implements UserServiceInterface {
 	}
 
 	@Override
-	public int setInformation(User user) throws Exception {
-
+	public int setInformation(User user) throws Exception { 
 		// 判断用户有效性
 		int isUserExist = login(user);
 		// 返回值不为0，表示出错，返回出错标志

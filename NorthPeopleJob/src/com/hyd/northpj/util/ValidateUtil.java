@@ -23,24 +23,24 @@ public class ValidateUtil {
 
 	/**
 	 * 验证用户名和密码是否为空，并对sql语句进行过滤，以防止注入
-	 * @param loginUse
+	 * @param loginUser
 	 * @return 返回验证结果
 	 * 1-->用户名为空，2--->用户名未通过sql安全性验证，
 	 * 3-->用户密码为空，4--->用户密码未通过sql安全性验证，
 	 * 0 通过验证
 	 */
-	public static int validAdminUser(AdminUser loginUse){
-		if(loginUse.getUsername()==null||loginUse.getUsername().trim().equals(""))
+	public static int validAdminUser(AdminUser loginUser){
+		if(loginUser.getUsername()==null||loginUser.getUsername().trim().equals(""))
 		{
 			return 1;
-		}else if(!isPassSqlFilter(loginUse.getUsername()))
+		}else if(!isPassSqlFilter(loginUser.getUsername()))
 		{
 			return 2;
 		}
-		if(loginUse.getUsername()==null||loginUse.getPassword().trim().equals(""))
+		if(loginUser.getUsername()==null||loginUser.getPassword().trim().equals(""))
 		{
 			return 3;
-		}else if(!isPassSqlFilter(loginUse.getPassword()))
+		}else if(!isPassSqlFilter(loginUser.getPassword()))
 		{
 			return 4;
 		}
@@ -50,24 +50,24 @@ public class ValidateUtil {
 	
 	/**
 	 * 验证用户名和密码是否为空，并对sql语句进行过滤，以防止注入
-	 * @param loginUse
+	 * @param loginUser
 	 * @return 返回验证结果
 	 * 1-->用户名为空，2--->用户名未通过sql安全性验证，
 	 * 3-->用户密码为空，4--->用户密码未通过sql安全性验证，
 	 * 0 通过验证
 	 */
-	public static int validUser(User loginUse){
-		if(loginUse.getUsername()==null||loginUse.getUsername().trim().equals(""))
+	public static int validUser(User loginUser){
+		if(loginUser.getUsername()==null||loginUser.getUsername().trim().equals(""))
 		{
 			return 1;
-		}else if(!isPassSqlFilter(loginUse.getUsername()))
+		}else if(!isPassSqlFilter(loginUser.getUsername()))
 		{
 			return 2;
 		}
-		if(loginUse.getUsername()==null||loginUse.getPassword().trim().equals(""))
+		if(loginUser.getUsername()==null||loginUser.getPassword().trim().equals(""))
 		{
 			return 3;
-		}else if(!isPassSqlFilter(loginUse.getPassword()))
+		}else if(!isPassSqlFilter(loginUser.getPassword()))
 		{
 			return 4;
 		}
@@ -109,20 +109,20 @@ public class ValidateUtil {
 	
 	/**
 	 * 验证用户所有属性的安全性
-	 * @param loginUse
+	 * @param loginUser
 	 * @return 返回验证结果，1-->未通过验证，0-->通过验证
 	 * @throws SecurityException
 	 * @throws ClassNotFoundException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
 	 */
-	public static int validateAdminUserAllProperty(AdminUser loginUse) throws SecurityException, ClassNotFoundException, IllegalArgumentException, IllegalAccessException{
+	public static int validateAdminUserAllProperty(AdminUser loginUser) throws SecurityException, ClassNotFoundException, IllegalArgumentException, IllegalAccessException{
 		
 		Field[] fds = Class.forName("com.hyd.northpj.entity.AdminUser")
 				.getDeclaredFields();
 
 		for (int i = 0; i < fds.length; i++) {
-			Object userProperty = fds[i].get(loginUse);
+			Object userProperty = fds[i].get(loginUser);
 			if (userProperty != null
 					&& !isPassSqlFilter(userProperty.toString())) {
 				return 1;
@@ -133,20 +133,20 @@ public class ValidateUtil {
 	
 	/**
 	 * 验证用户所有属性的安全性
-	 * @param loginUse
+	 * @param loginUser
 	 * @return 返回验证结果，1-->未通过验证，0-->通过验证
 	 * @throws SecurityException
 	 * @throws ClassNotFoundException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
 	 */
-	public static int validateUserAllProperty(User loginUse) throws SecurityException, ClassNotFoundException, IllegalArgumentException, IllegalAccessException{
+	public static int validateUserAllProperty(User loginUser) throws SecurityException, ClassNotFoundException, IllegalArgumentException, IllegalAccessException{
 		
 		Field[] fds = Class.forName("com.hyd.northpj.entity.User")
 				.getDeclaredFields();
 
 		for (int i = 0; i < fds.length; i++) {
-			Object userProperty = fds[i].get(loginUse);
+			Object userProperty = fds[i].get(loginUser);
 			if (userProperty != null
 					&& !isPassSqlFilter(userProperty.toString())) {
 				return 1;

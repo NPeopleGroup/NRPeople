@@ -17,6 +17,7 @@ public class RegisterAction extends ModelAction<User> {
 	}
 
 	public String execute() throws Exception {
+		System.out.println(user.toString());
 		PrintDataToAjax PrintDataToAjax = new PrintDataToAjax();
 		try {
 			UserService userService = new UserService();

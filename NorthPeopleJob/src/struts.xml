@@ -103,10 +103,10 @@
 		<action name="edit_user" class="com.hyd.northpj.action.EditUserAction">
 			<result name="success">/WEB-INF/admin/admin_edit_users.jsp</result>
 		</action>
-		<action name="getPara" class="com.hyd.northpj.action.GetParaAction">
-			<interceptor-ref name="defaultStack">
+		<action name="userRegister" class="com.hyd.northpj.action.EditUserAction">
+			<!-- <interceptor-ref name="defaultStack">
 				<param name="modelDriven.refreshModelBeforeResult">true</param>
-			</interceptor-ref>
+			</interceptor-ref> -->
 			<result name="success">/WEB-INF/admin/admin_edit_users.jsp</result>
 		</action>
 	</package>

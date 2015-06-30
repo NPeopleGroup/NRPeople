@@ -40,7 +40,7 @@
     var cardregtime=document.all.residencePermitDate.value;
     if(cardregtime==""){
       alert("居住证申领日期不能为空！");
-      document.all.cardregtime.focus();
+      document.all.residencePermitDate.focus();
       return false;
     }
     
@@ -83,7 +83,7 @@
     
     //日期格式
     if(document.getElementById("birth").value!=""){
-    	if(!checkDate("csrq","")){ document.getElementById("csrq").focus();return false;}
+    	if(!checkDate("birth","")){ document.getElementById("birth").focus();return false;}
     }else{
     	alert("请录入出生日期！");
     	document.getElementById("birth").focus();
@@ -533,10 +533,10 @@
 	//回车下一个输入框功能
 	function enterNext(id){
 		if(window.event.keyCode==13){
-			if(id=="zzmm"){
-				checkDate("csrq",id);
-			}else if(id=="hasFZ"){
-				checkDate("cardregtime",id);
+			if(id=="political"){
+				checkDate("birth",id);
+			}else if(id=="hasCriminal"){
+				checkDate("residencePermitDate",id);
 			}else{
 				document.getElementById(id).focus();
 			}
