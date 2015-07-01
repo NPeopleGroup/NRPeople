@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 import com.hyd.northpj.dao.interfaces.UserDaoInterface;
 import com.hyd.northpj.entity.User;
 import com.hyd.northpj.util.HibernateSessionFactory;
+import com.hyd.northpj.util.ValidateUtil;
 
 public class UserDao implements UserDaoInterface {
 	private Session session = HibernateSessionFactory.getSession();
@@ -53,9 +54,16 @@ public class UserDao implements UserDaoInterface {
 	@Override
 	public int updateUserInformation(User user) throws Exception {
 		// TODO Auto-generated method stub
-		session.update(user);
-		tx.commit();
-		session.close();
+		//获取userName所对应的sn
+		String myQuery="select sn from User where username='"+user.getUsername()+"'";
+		int sn=(int) session.createQuery(myQuery).uniqueResult();
+		User newUser=(User)session.get(User.class,1);
+		ValidateUtil.copyProperty(newUser, user);
+		Session mySession=HibernateSessionFactory.getSession();
+		Transaction myTransation=mySession.beginTransaction();
+		mySession.update(newUser);
+		myTransation.commit();
+		mySession.close();
 		return 0;
 	}
 

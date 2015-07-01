@@ -299,11 +299,11 @@
    	document.getElementById('pnumroles').value = pnum.roles;
     document.getElementById('pnumroles').value = pnum.roles;
 	var pnumroles=pnum.roles;
-	for(var i=0;i<pnumroles;i++){
-	     pnumrolesname=document.getElementById("irolesxm"+i).value;
-	     pnumrolesgx = document.getElementById("irolesgx"+i).value;
-	     pnumrolesidcard = document.getElementById("irolesidcard"+i).value;
-	     pnumrolesidwhcd= document.getElementById("iroleswhcd"+i).value;
+	for(var i=1;i<pnumroles+1;i++){
+	     pnumrolesname=document.getElementById("irelationName"+i).value;
+	     pnumrolesgx = document.getElementById("irelation"+i).value;
+	     pnumrolesidcard = document.getElementById("irelationIDCard"+i).value;
+	     pnumrolesidwhcd= document.getElementById("irelationdegree"+i).value;
 	     if(pnumrolesname=="" && pnumrolesgx=="" && pnumrolesidcard=="" && pnumrolesidwhcd==""){
 	     }else{
 		     if(pnumrolesname==null || pnumrolesname==""){

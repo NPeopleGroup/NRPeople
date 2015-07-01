@@ -78,12 +78,6 @@ public class UserService implements UserServiceInterface {
 	@Override
 	public int setInformation(User user) throws Exception { 
 		// 判断用户有效性
-		int isUserExist = login(user);
-		// 返回值不为0，表示出错，返回出错标志
-		if (isUserExist != 0) {
-			myLogger.error("无法通过用户有效性验证,请核对用户名以及密码！");
-			return isUserExist;
-		}
 		if (ValidateUtil.validateUserAllProperty(user) == 0) {
 			myUserDao.updateUserInformation(user);
 		} else {

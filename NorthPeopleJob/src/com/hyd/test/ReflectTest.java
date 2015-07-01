@@ -7,6 +7,8 @@ import org.apache.log4j.Logger;
 public class ReflectTest {
 	private String code;
 	private String name;
+	private String test;
+	private int hello;
 
 	public void setCode(String code) {
 		this.code = code;
@@ -35,11 +37,28 @@ public class ReflectTest {
 
 		System.out.println(fds.length);
 		for (int i = 0; i < fds.length; i++) {
+			System.out.println(fds[i].getName());
 			System.out.println(fds[i].get(obj));
 
 		}
 		Logger myLogger=Logger.getLogger("com.hyd.test.ReflectTest");
 		myLogger.error("error!");
 		System.out.println(System.getProperty("catalina.home"));
+	}
+
+	public String getTest() {
+		return test;
+	}
+
+	public void setTest(String test) {
+		this.test = test;
+	}
+
+	public int getHello() {
+		return hello;
+	}
+
+	public void setHello(int hello) {
+		this.hello = hello;
 	}
 }

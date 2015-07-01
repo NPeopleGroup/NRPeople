@@ -22,7 +22,7 @@
 		<action name="AdminLoginAction" class="com.hyd.northpj.action.AdminLoginAction">
 			<result name="success">/WEB-INF/admin/admin_index.jsp
 			</result>
-			<result name="input">adminQuestionListPage
+			<result name="input">/WEB-INF/admin/admin_login.jsp
 			</result>
 		</action>
 		<action name="adminManager">
@@ -103,11 +103,17 @@
 		<action name="edit_user" class="com.hyd.northpj.action.EditUserAction">
 			<result name="success">/WEB-INF/admin/admin_edit_users.jsp</result>
 		</action>
-		<action name="userRegister" class="com.hyd.northpj.action.EditUserAction">
+		<action name="userInfoUpdate" class="com.hyd.northpj.action.EditUserAction" method="userInfoUpdate">
 			<!-- <interceptor-ref name="defaultStack">
 				<param name="modelDriven.refreshModelBeforeResult">true</param>
 			</interceptor-ref> -->
 			<result name="success">/WEB-INF/admin/admin_edit_users.jsp</result>
+		</action>
+			<action name="userInfoView" class="com.hyd.northpj.action.EditUserAction" method="userInfoView">
+			<!-- <interceptor-ref name="defaultStack">
+				<param name="modelDriven.refreshModelBeforeResult">true</param>
+			</interceptor-ref> -->
+			<result name="success">/userInfoUpdate.jsp</result>
 		</action>
 	</package>
 </struts>
