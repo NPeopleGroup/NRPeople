@@ -11,8 +11,21 @@
 			</result>
 		</action>
 		<action name="adminUserAdd">
-			<result name="success">/WEB-INF/admin/adminuser_list.jsp
+			<result name="success">/WEB-INF/admin/adminuser_add.jsp
 			</result>
 		</action>
+		<action name="addAdminUser" class="com.hyd.northpj.action.AdminUserOpeAction" method="userAdd">
+			<result name="success">/WEB-INF/admin/adminuser_add.jsp
+			</result>
+		</action>
+		<action name="deleteAdminUser" class="com.hyd.northpj.action.AdminUserOpeAction" method="userDelete">
+			<result name="success">/WEB-INF/admin/adminuser_add.jsp
+			</result>
+		</action>
+		<action name="updateAdminUser" class="com.hyd.northpj.action.AdminUserOpeAction" method="updateDelete">
+			<result name="success">/WEB-INF/admin/adminuser_add.jsp
+			</result>
+		</action>
+
 	</package>
 </struts>

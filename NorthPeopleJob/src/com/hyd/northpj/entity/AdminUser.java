@@ -45,4 +45,12 @@ public class AdminUser {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return "AdminUser [sn=" + sn + ", username=" + username + ", password="
+				+ password + ", type=" + type + ", name=" + name + "]";
+	}
+	
+	
 }
