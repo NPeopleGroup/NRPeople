@@ -100,9 +100,7 @@
 			<result type="json">
 			</result>
 		</action>
-		<action name="edit_user" class="com.hyd.northpj.action.EditUserAction">
-			<result name="success">/WEB-INF/admin/admin_edit_users.jsp</result>
-		</action>
+		
 		<action name="userInfoUpdate" class="com.hyd.northpj.action.EditUserAction" method="userInfoUpdate">
 			<!-- <interceptor-ref name="defaultStack">
 				<param name="modelDriven.refreshModelBeforeResult">true</param>
@@ -110,7 +108,7 @@
 			<result name="success">/WEB-INF/admin/admin_edit_users.jsp</result>
 		</action>
 			<action name="userInfoView" class="com.hyd.northpj.action.EditUserAction" method="userInfoView">
-			<!-- <interceptor-ref name="defaultStack">
+			<!-- <interceptor-ref name="defaultStack">.nor
 				<param name="modelDriven.refreshModelBeforeResult">true</param>
 			</interceptor-ref> -->
 			<result name="success">/userInfoUpdate.jsp</result>

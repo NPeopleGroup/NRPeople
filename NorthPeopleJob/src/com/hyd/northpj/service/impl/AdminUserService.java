@@ -120,4 +120,12 @@ public class AdminUserService implements AdminUserServiceInterface {
 		return myUserList;
 	}
 
+	@Override
+	public List<AdminUser> getAdminUserList() throws Exception {
+		// TODO Auto-generated method stub
+		AdminUserDao myAdminUserDao=new AdminUserDao();
+		List<AdminUser> myAdminUserList=myAdminUserDao.selectAllUsers();
+		return myAdminUserList;
+	}
+
 }

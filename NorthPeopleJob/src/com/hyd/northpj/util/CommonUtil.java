@@ -30,6 +30,5 @@ public class CommonUtil {
 		myJsonObject.accumulate("rows", list, myJsonConfig);
 		myResponse.setCharacterEncoding("UTF-8");
 		myResponse.getWriter().write(myJsonObject.toString());
-//		System.out.println(myJsonObject.toString());
 	}
 }

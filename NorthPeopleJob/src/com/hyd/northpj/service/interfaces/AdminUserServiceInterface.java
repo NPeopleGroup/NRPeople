@@ -52,4 +52,6 @@ public interface AdminUserServiceInterface {
 	public AdminUser getAdminUserInformation(String username) throws Exception;
 	
 	public List<User> getNormalUserList() throws Exception;
+
+	public List<AdminUser> getAdminUserList() throws Exception;
 }

@@ -26,6 +26,8 @@
 			<result name="success">/WEB-INF/admin/adminuser_add.jsp
 			</result>
 		</action>
-
+		<action name="showAdminUserInfo" class="com.hyd.northpj.action.AdminUserUpdateAction" method="showAdminUserInfo">
+			<result name="success">/WEB-INF/admin/admin_edit_users.jsp</result>
+		</action>
 	</package>
 </struts>

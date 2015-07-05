@@ -28,7 +28,6 @@ public class EditUserAction extends ModelAction<User>{
 	public String userInfoView() throws Exception
 	{
 		setMyUser(myUserService.getInformation(session.getAttribute("NorthPeopleJob_username").toString()));
-		System.out.println(getMyUser().toString());
 		
 		/*Field[] fds = Class.forName("com.hyd.northpj.entity.User")
 				.getDeclaredFields();

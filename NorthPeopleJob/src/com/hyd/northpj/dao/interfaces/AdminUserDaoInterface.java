@@ -1,5 +1,7 @@
 package com.hyd.northpj.dao.interfaces;
 
+import java.util.List;
+
 import com.hyd.northpj.entity.AdminUser;
 
 public interface AdminUserDaoInterface {
@@ -40,11 +42,18 @@ public interface AdminUserDaoInterface {
 	public int updateUserInformation(AdminUser adminUser) throws Exception;
 
 	/**
-	 * 获取用户信息
+	 * 获取单一用户信息
 	 * 
 	 * @param adminUser
 	 * @return 用户信息
 	 * @throws Exception
 	 */
 	public AdminUser selectUserInformation(String username) throws Exception;
+	
+	/**
+	 * 获取所有用户信息
+	 * @return
+	 * @throws Exception
+	 */
+	public List<AdminUser> selectAllUsers() throws Exception;
 }

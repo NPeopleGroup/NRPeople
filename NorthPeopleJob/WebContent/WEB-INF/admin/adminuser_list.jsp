@@ -82,7 +82,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 {
                     alert("请先选择需要操作的行!");
                 }else{
-                   window.location.href='edit_user?userName='+selection[0]['username'];
+                   console.log(selection[0]);
+                   window.location.href='showAdminUserInfo?userName='+selection[0]['username'];
                 }
             });
         });

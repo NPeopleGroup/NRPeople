@@ -73,6 +73,15 @@ public class AdminUserDao implements AdminUserDaoInterface {
 		return null;
 	}
 
+	@Override
+	public List<AdminUser> selectAllUsers() throws Exception {
+		// TODO Auto-generated method stub
+		String sqlStatement="from AdminUser";
+		query=session.createQuery(sqlStatement);
+		List<AdminUser> myUserList=query.list();
+		return myUserList;
+	}
+
     //public static void main(String[] args) throws Exception{
     	//AdminUserDao ad=new AdminUserDao();
     	//AdminUser au=new AdminUser();
