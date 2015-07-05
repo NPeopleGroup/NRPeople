@@ -9,7 +9,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>My JSP 'index.jsp' starting page</title>
+<title>问题列表</title>
 
 <link rel="stylesheet" href="js/jqwidgets/styles/jqx.base.css"
 	type="text/css" />

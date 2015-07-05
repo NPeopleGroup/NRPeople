@@ -6,7 +6,13 @@
 <struts>
 	<package name="adminUserAction" extends="struts-default,json-default"
 		namespace="/">
+
+		<!--所有adminuser用户的显示  -->
 		<action name="adminUserList">
+			<result name="success">/WEB-INF/admin/adminuser_list.jsp
+			</result>
+		</action>
+		<action name="allAdminUserList" class="com.hyd.northpj.action.AdminUserListAction">
 			<result name="success">/WEB-INF/admin/adminuser_list.jsp
 			</result>
 		</action>
@@ -14,19 +20,21 @@
 			<result name="success">/WEB-INF/admin/adminuser_add.jsp
 			</result>
 		</action>
-		<action name="addAdminUser" class="com.hyd.northpj.action.AdminUserOpeAction" method="userAdd">
+		<action name="addAdminUser" class="com.hyd.northpj.action.AdminUserAddAction">
 			<result name="success">/WEB-INF/admin/adminuser_add.jsp
 			</result>
 		</action>
-		<action name="deleteAdminUser" class="com.hyd.northpj.action.AdminUserOpeAction" method="userDelete">
+		<action name="deleteAdminUser" class="com.hyd.northpj.action.AdminUserDeleteAction" >
 			<result name="success">/WEB-INF/admin/adminuser_add.jsp
 			</result>
 		</action>
-		<action name="updateAdminUser" class="com.hyd.northpj.action.AdminUserOpeAction" method="updateDelete">
+		<action name="updateAdminUser" class="com.hyd.northpj.action.AdminUserUpdateAction" >
 			<result name="success">/WEB-INF/admin/adminuser_add.jsp
 			</result>
 		</action>
-		<action name="showAdminUserInfo" class="com.hyd.northpj.action.AdminUserUpdateAction" method="showAdminUserInfo">
+
+		<!--显示单个用户信息  -->	
+		<action name="showAdminUserInfo" class="com.hyd.northpj.action.AdminUserInfoAction">
 			<result name="success">/WEB-INF/admin/admin_edit_users.jsp</result>
 		</action>
 	</package>

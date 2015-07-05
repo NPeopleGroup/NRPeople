@@ -113,10 +113,12 @@ public class ValidateUtil {
 				.getDeclaredFields();
 
 		for (int i = 0; i < fds.length; i++) {
+			fds[i].setAccessible(true);
 			Object userProperty = fds[i].get(loginUser);
-			if (userProperty != null
-					&& !isPassSqlFilter(userProperty.toString())) {
-				return 1;
+			if (userProperty != null) {
+				if (!isPassSqlFilter(userProperty.toString())) {
+					return 1;
+				}
 			}
 		}
 		return 0;

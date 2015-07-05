@@ -22,22 +22,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 	<div class="container myUserTable">
-		<form class="form-horizontal">
+		<form class="form-horizontal" action="updateAdminUser">
+			<input type="hidden" value="${myEditUser.sn}" name="sn">
 			<div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
 				<div class="col-sm-6">
-					<input type="email" class="form-control" id="inputEmail3" placeholder="用户名" value="${myEditUser.username}"></div>
+					<input type="text" class="form-control" id="inputEmail3" placeholder="用户名" value="${myEditUser.username}" name="username"></div>
 			</div>
 			<div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">用户密码</label>
 				<div class="col-sm-6">
 					<input type="password" class="form-control" id="inputPassword3" placeholder="用户密码"
-					value="${myEditUser.password}"></div>
+					value="${myEditUser.password}" name="password"></div>
 			</div>
 			<div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">用户类型</label>
 				<div class="col-sm-6">
-					<select class="form-control">
+					<select class="form-control" name="type">
 						<option>1(管理员)</option>
 						<option>2(业务员)</option>
 						<option>3(普通用户)</option>
@@ -48,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<label for="inputPassword3" class="col-sm-2 control-label">真实姓名</label>
 				<div class="col-sm-6">
 					<input type="text" class="form-control" id="inputPassword3" placeholder="真实姓名"
-					value="${myEditUser.name}"></div>
+					value="${myEditUser.name}" name="name"></div>
 			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-4 col-sm-6">

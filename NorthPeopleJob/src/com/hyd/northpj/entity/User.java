@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 public class User {
 
 	private int sn;
-	private String username;
+	public String username;
 	private String password;
 	private String type;
 	private String cardID;
@@ -594,4 +594,6 @@ public class User {
 				+ ", applicationTime=" + applicationTime + ", appointmentTime="
 				+ appointmentTime + "]";
 	}
+	
+	
 }

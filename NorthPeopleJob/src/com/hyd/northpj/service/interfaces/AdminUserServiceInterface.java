@@ -50,8 +50,36 @@ public interface AdminUserServiceInterface {
 	 * @throws Exception
 	 */
 	public AdminUser getAdminUserInformation(String username) throws Exception;
-	
+
+	/**
+	 * 获取所有申请人员的信息
+	 * @return
+	 * @throws Exception
+	 */
 	public List<User> getNormalUserList() throws Exception;
 
+	/**
+	 * 获取所有业务员信息
+	 * @return
+	 * @throws Exception
+	 */
 	public List<AdminUser> getAdminUserList() throws Exception;
+
+	/**
+	 * 根据用户名删除业务员
+	 * @param userName
+	 * @return 成功返回0，否则返回1
+	 * @throws Exception
+	 */
+	public int deleteAdminUser(String userName) throws Exception;
+
+	
+	/**
+	 * 删除普通用户
+	 * @param userName
+	 * @return 成功返回0，否则返回1
+	 * @throws Exception
+	 */
+	public int deleteUser(String userName) throws Exception;
+	
 }

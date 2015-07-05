@@ -82,11 +82,26 @@ public class AdminUserDao implements AdminUserDaoInterface {
 		return myUserList;
 	}
 
-    //public static void main(String[] args) throws Exception{
-    	//AdminUserDao ad=new AdminUserDao();
-    	//AdminUser au=new AdminUser();
-    	//au=ad.selectUserInformation("13821788888");
-    	//System.out.print(au.getName());
-    //}
+	@Override
+	public int delteteAdminUser(String userName) throws Exception {
+		// TODO Auto-generated method stub
+		String deleteSql="delete from AdminUser as p where p.username=?";
+		query=session.createQuery(deleteSql);
+		query.setString(0, userName);
+		query.executeUpdate();
+		session.beginTransaction().commit();
+		return 0;
+	}
+
+	@Override
+	public int delteteUser(String userName) throws Exception {
+		// TODO Auto-generated method stub
+		String deleteSql="delete from User as p where p.username=?";
+		query=session.createQuery(deleteSql);
+		query.setString(0, userName);
+		query.executeUpdate();
+		session.beginTransaction().commit();
+		return 0;
+	}
 
 }

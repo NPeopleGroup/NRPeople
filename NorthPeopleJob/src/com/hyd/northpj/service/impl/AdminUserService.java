@@ -86,13 +86,7 @@ public class AdminUserService implements AdminUserServiceInterface {
 
 	public int setAdminUserInformation(AdminUser adminUser) throws Exception {
 
-		// 判断用户有效性
-		int isUserExist = login(adminUser);
-		// 返回值不为0，表示出错，返回出错标志
-		if (isUserExist != 0) {
-			myLogger.error("无法通过用户有效性验证,请核对用户名以及密码！");
-			return isUserExist;
-		}
+
 		if (ValidateUtil.validateAdminUserAllProperty(adminUser) == 0) {
 			myAdminUserDao.updateUserInformation(adminUser);
 		} else {
@@ -126,6 +120,20 @@ public class AdminUserService implements AdminUserServiceInterface {
 		AdminUserDao myAdminUserDao=new AdminUserDao();
 		List<AdminUser> myAdminUserList=myAdminUserDao.selectAllUsers();
 		return myAdminUserList;
+	}
+
+	@Override
+	public int deleteAdminUser(String userName) throws Exception {
+		// TODO Auto-generated method stub
+		myAdminUserDao.delteteAdminUser(userName);
+		return 0;
+	}
+
+	@Override
+	public int deleteUser(String userName) throws Exception {
+		// TODO Auto-generated method stub
+		myAdminUserDao.delteteUser(userName);
+		return 0;
 	}
 
 }

@@ -56,4 +56,21 @@ public interface AdminUserDaoInterface {
 	 * @throws Exception
 	 */
 	public List<AdminUser> selectAllUsers() throws Exception;
+	
+	/**
+	 * 删除用户信息
+	 * @param userName
+	 * @return 删除成功返回0
+	 * @throws Exception
+	 */
+	public int delteteAdminUser(String userName) throws Exception;
+	
+	/**
+	 * 删除普通用户信息
+	 * @param userName
+	 * @return 删除成功返回0
+	 * @throws Exception
+	 */
+	public int delteteUser(String userName) throws Exception;
+
 }

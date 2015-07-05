@@ -9,11 +9,12 @@
    <link href="./assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
   <link href="./assets/css/bui-min.css" rel="stylesheet" type="text/css" />
    <link href="./assets/css/main-min.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<form id="myFrom" class="form-horizontal span24" action="addAdminUser">
+			<form id="myFrom" class="form-horizontal span24">
 				<legend>增加业务员信息</legend>
 				<div class="row">
 					<div class="control-group span8">
@@ -22,7 +23,7 @@
 							用户名
 						</label>
 						<div class="controls">
-							<input name="username" type="text" data-rules="{required:true}" class="input-normal control-text"></div>
+							<input name="username" id="username" type="text" data-rules="{required:true}" class="input-normal control-text"></div>
 					</div>
 					<div class="control-group span8">
 						<label class="control-label">
@@ -30,42 +31,41 @@
 							密码
 						</label>
 						<div class="controls">
-							<input name="password" type="password" class="input-normal control-text"/>
+							<input name="password" id="password" type="password" class="input-normal control-text"/>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="control-group span8">
-						<label class="control-label">
-							<s>*</s>
-							用户类型
-						</label>
-						<div class="controls">
-							<select name="type">
-								<option>类型1</option>
-								<option>类型2</option>
-								<option>类型3</option>
-							</select>
-						</div>
-					</div>
-						<div class="control-group span8">
-						<label class="control-label">
-							<s>*</s>
-							用户姓名
-						</label>
-						<div class="controls">
-							<input type="text" name="name"></input>	
-						</div>
-					</div>	
-				</div>
-				<div class="row form-actions actions-bar">
+				<div>
 					<div class="span13 offset3 ">
-						<button type="submit" class="button button-primary">保存</button>
-						<button type="reset" class="button">重置</button>
+						<input type="button" class="button button-primary" id="mySubmitButton" value="提交"></input>
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$("#mySubmitButton").bind('click',function() {
+			alert("click");
+			/* Act on the event */
+			$.ajax({
+				url: 'addUser',
+				dataType: 'json',
+				data: {
+					"username":$("#username").val(),
+					"password":$("#password").val()
+				},
+				success:function(data){
+					if(data.result=="success")
+					{
+						alert("增加成功!");	
+						window.location.href="userList";
+					}
+				},
+				error:function(){
+					alert("增加失败，请重试!");	
+				}
+			})
+		});
+	</script>
 </body>
 </html>

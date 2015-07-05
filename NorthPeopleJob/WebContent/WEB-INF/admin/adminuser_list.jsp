@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="js/demos.js"></script>
    <script type="text/javascript">
         $(document).ready(function () {
-            var url = "<%=basePath%>/printAction";
+            var url = "<%=basePath%>/allAdminUserList";
 
             // prepare the data
             var source =
@@ -74,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               ]
             });
             $("#dataTable").jqxDataTable({pagerMode:"advanced"});
-            $("#myQueryButton").jqxButton({ height: 25});
+            $("#myDeleteButton").jqxButton({ height: 25});
             $("#myEditButton").jqxButton({ height: 25});
             $("#myEditButton").bind('click',function(){
                 var selection = $("#dataTable").jqxDataTable('getSelection');
@@ -86,13 +86,45 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                    window.location.href='showAdminUserInfo?userName='+selection[0]['username'];
                 }
             });
+            $("#myDeleteButton").bind('click',function(){
+                var selection = $("#dataTable").jqxDataTable('getSelection');
+                if(selection.length==0)
+                {
+                    alert("请先选择需要操作的行!");
+                }else{
+                   var choice=confirm("您确定要删除此业务员吗?");
+                   if(choice==true)
+                   {
+                  /*   window.location.href='deleteAdminUser?userName='+selection[0]['username'];*/
+                     $.ajax({
+                        url:"deleteAdminUser",
+                        data:{
+                            userName:selection[0]['username']
+                        },
+                        dataType:'json',
+                        success:function(data){
+                            if(data.result=="success"){
+                                alert("删除成功")
+                                window.location.href='adminUserList';
+                            }
+                            else{
+                                alert("删除失败"); 
+                            }
+                        },
+                        error:function(){
+                            alert("加载失败！");
+                        }
+                     });
+                   }
+                }
+            });
         });
     </script>
 </head>
 <body class='default'>
      <div id="dataTable"></div>
      <div id="myMenu" style="margin-top:20px">
-        <button id="myQueryButton">查询</button>
+        <button id="myDeleteButton">删除</button>
         <button id="myEditButton">编辑</button>
      </div>
 </body>

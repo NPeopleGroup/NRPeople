@@ -5,6 +5,7 @@
 
 <struts>
 	<include file="struts_adminuser.xml"></include>
+	<include file="struts_user.xml"></include>
 	<package name="actions" extends="struts-default,json-default" namespace="/">
 		<action name="RegisterAction" class="com.hyd.northpj.action.RegisterAction">
 			<result name="success">home.jsp
@@ -95,12 +96,6 @@
 			</result>
 		</action>
 
-
-		<action name="printAction" class="com.hyd.northpj.action.PrintAction">
-			<result type="json">
-			</result>
-		</action>
-		
 		<action name="userInfoUpdate" class="com.hyd.northpj.action.EditUserAction" method="userInfoUpdate">
 			<!-- <interceptor-ref name="defaultStack">
 				<param name="modelDriven.refreshModelBeforeResult">true</param>

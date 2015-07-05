@@ -32,8 +32,8 @@
     <div class="dl-main-nav">
       <div class="dl-inform"><div class="dl-inform-title">贴心小秘书<s class="dl-inform-icon dl-up"></s></div></div>
       <ul id="J_Nav"  class="nav-list ks-clear">
-        <li class="nav-item dl-selected"><div class="nav-item-inner nav-home">用户管理页面</div></li>
-        <li class="nav-item"><div class="nav-item-inner nav-order">问题管理界面</div></li>
+        <li class="nav-item dl-selected"><div class="nav-item-inner nav-home">业务员管理</div></li>
+        <li class="nav-item"><div class="nav-item-inner nav-order">普通用户管理</div></li>
         <li class="nav-item"><div class="nav-item-inner nav-marketing">其他页面</div></li>
       </ul>
     </div>
@@ -53,7 +53,7 @@
           id:'menu', 
           homePage : 'code',
           menu:[{
-              text:'用户管理',
+              text:'业务员管理',
               items:[
                 {id:'code',text:'浏览用户',href:'adminUserList',closeable : false},
                 {id:'main-menu',text:'增加用户',href:'adminUserAdd'},
@@ -62,16 +62,10 @@
           },{
             id:'form',
             menu:[{
-                text:'表单页面',
+                text:'用户管理页面',
                 items:[
-                  {id:'code',text:'表单代码',href:'form/code.html'},
-                  {id:'example',text:'表单示例',href:'form/example.html'},
-                  {id:'introduce',text:'表单简介',href:'form/introduce.html'},
-                  {id:'valid',text:'表单基本验证',href:'form/basicValid.html'},
-                  {id:'advalid',text:'表单复杂验证',href:'form/advalid.html'},
-                  {id:'remote',text:'远程调用',href:'form/remote.html'},
-                  {id:'group',text:'表单分组',href:'form/group.html'},
-                  {id:'depends',text:'表单联动',href:'form/depends.html'}
+                  {id:'user',text:'用户浏览',href:'userList'},
+                  {id:'useradd',text:'增加用户',href:'userAdd'},
                 ]
               },{
                 text:'成功失败页面',
