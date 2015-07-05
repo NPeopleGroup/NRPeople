@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="userAction" extends="struts-default,json-default"
+		namespace="/">
+
+		<!--所有user用户的显示 -->
+		<action name="userList">
+			<result name="success">
+				/WEB-INF/admin/user_list.jsp
+			</result>
+		</action>
+		<action name="allUserList" class="com.hyd.northpj.action.UserListAction">
+		</action>
+		<action name="userAdd">
+			<result name="success">
+				/WEB-INF/admin/user_add.jsp
+			</result>
+		</action>
+		<action name="addUser" class="com.hyd.northpj.action.UserAddAction">
+					</action>
+		<action name="userDelete" class="com.hyd.northpj.action.UserDeleteAction">
+		</action>
+		<action name="userUpdate" class="com.hyd.northpj.action.UserUpdateAction">
+		</action>
+		<!--显示单个用户信息 -->
+		<action name="showUserInfo" class="com.hyd.northpj.action.ViewUserInfoAction">
+			<result name="success">/WEB-INF/admin/user_info.jsp</result>
+		</action>
+
+		<action name="userEdit">
+			<result name="success">/WEB-INF/admin/user_edit.jsp</result>
+		</action>
+	</package>
+</struts>
