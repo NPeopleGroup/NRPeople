@@ -24,6 +24,16 @@ public class QuestionService implements QuestionServiceInterface {
 		return myQuestionList;
 	}
 
+	public List<Question> getQuestionList(String questionType) throws Exception {
+		// TODO Auto-generated method stub
+		List<Question> myQuestionList = null;
+		myQuestionList = myQuestionDao.selectQuestionList(questionType);
+		if (myQuestionList == null) {
+			myLogger.error("读取数据库问题列表出现错误！");
+		}
+		return myQuestionList;
+	}
+	
 	@Override
 	public int addQuestion(Question question) throws Exception {
 		// TODO Auto-generated method stub

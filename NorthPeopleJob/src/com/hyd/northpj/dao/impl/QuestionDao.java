@@ -25,6 +25,19 @@ public class QuestionDao implements QuestionDaoInterface {
 		return questionList;
 	}
 
+	public List<Question> selectQuestionList(String questionType)
+			throws Exception {
+		// TODO Auto-generated method stub
+		query = session
+				.createQuery("from Question Q  WHERE Q.type='"
+						+ questionType+"' order by Q.id");
+		
+		
+		@SuppressWarnings("unchecked")
+		List<Question> questionList = query.list();
+		return questionList;
+	}
+
 	@Override
 	public int insertQuestion(Question question) throws Exception {
 		// TODO Auto-generated method stub
