@@ -34,10 +34,35 @@ public class CheckScorePageAction extends ActionSupport {
 			return "overtime";
 		}
 
+		
+		//在技能(职称)和技能(职业资格)中取值比较大的那个
+		EvaluationScore technicalEvaluationScore = new EvaluationScore();
+		technicalEvaluationScore.setQuestionType("技能");
+		technicalEvaluationScore.setQuestionScore("0");
 		for (EvaluationScore evaluationScore : evaluationScoreList) {
-			System.out.println(evaluationScore.getQuestionType() + "--"
-					+ evaluationScore.getQuestionScore());
+			if (evaluationScore.getQuestionType().equals("技能(职业资格)")) {
+				if(Float.parseFloat(evaluationScore.getQuestionScore())>=Float.parseFloat(technicalEvaluationScore.getQuestionScore())){
+					technicalEvaluationScore.setQuestionScore(evaluationScore.getQuestionScore());
+				}
+			}
+			if (evaluationScore.getQuestionType().equals("技能(职称)")) {
+				if(Float.parseFloat(evaluationScore.getQuestionScore())>=Float.parseFloat(technicalEvaluationScore.getQuestionScore())){
+					technicalEvaluationScore.setQuestionScore(evaluationScore.getQuestionScore());
+				}
+			}
+
 		}
+
+		for (int i = 0, len = evaluationScoreList.size(); i < len; ++i) {
+			if (evaluationScoreList.get(i).getQuestionType().equals("技能(职称)")
+					|| evaluationScoreList.get(i).getQuestionType()
+							.equals("技能(职业资格)")) {
+				evaluationScoreList.remove(i);
+				--len;
+				--i;
+			}
+		}
+		evaluationScoreList.add(technicalEvaluationScore);
 		return SUCCESS;
 	}
 }

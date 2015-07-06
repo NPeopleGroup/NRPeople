@@ -44,8 +44,8 @@ public class AnswerDao implements AnswerDaoInterface {
 	@Override
 	public ArrayList<EvaluationScore> selectEvaluationScore(String username)
 			throws Exception {
-		String sql = "select questionType,SUM(questionScore) as questionScore from t_answer where username = "
-				+ username + " group by questionType";
+		String sql = "select questionObjective,SUM(questionScore) as questionScore from t_answer where username = "
+				+ username + " group by questionObjective";
 		SQLQuery query = (SQLQuery) session.createSQLQuery(sql);
 
 		List<Object[]> retList = query.list();

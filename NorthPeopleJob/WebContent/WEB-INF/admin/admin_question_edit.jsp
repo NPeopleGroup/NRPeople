@@ -75,6 +75,18 @@
 		}
 		$("[name='objectiveD']").val("${question.objectiveD}");
 		$("[name='gotoD']").val("${question.gotoD}");
+		
+		if ("${question.activationE}" == "on") {
+			$("[name='activationE']").attr("checked", 'true');
+		}
+		$("[name='objectiveE']").val("${question.objectiveE}");
+		$("[name='gotoE']").val("${question.gotoE}");
+		
+		if ("${question.activationF}" == "on") {
+			$("[name='activationF']").attr("checked", 'true');
+		}
+		$("[name='objectiveF']").val("${question.objectiveF}");
+		$("[name='gotoF']").val("${question.gotoF}");
 	});
 </script>
 <script type="text/javascript">
@@ -156,7 +168,8 @@
 					class="normal_select">
 					<option value="年龄">年龄</option>
 					<option value="教育">教育</option>
-					<option value="技能">技能</option>
+					<option value="技能(职称)">技能(职称)</option>
+					<option value="技能(职业资格)">技能(职业资格)</option>
 					<option value="住房">住房</option>
 					<option value="社保">社保</option>
 					<option value="落户地区">落户地区</option>
@@ -170,10 +183,11 @@
 			</div>
 			<div class="form_item">
 				<label class="normal_label">问题图片:</label> <input type="file"
-					name="image" class="normal_input" onchange="previewImage(this)"/>
+					name="image" class="normal_input" onchange="previewImage(this)" />
 			</div>
-			<div class="form_item" id="preview" style="height:210px">
-				<img src="img/question-${question.id}.png" width="300" height="210" id="imghead"/>				
+			<div class="form_item" id="preview" style="height: 210px">
+				<img src="img/question-${question.id}.png" width="300" height="210"
+					id="imghead" />
 			</div>
 			<div class="form_item">
 				<button type="submit" class="normal_button">确认</button>
@@ -186,6 +200,8 @@
 					<li>选项B</li>
 					<li>选项C</li>
 					<li>选项D</li>
+															<li>选项E</li>
+					<li>选项F</li>
 				</ul>
 				<div>
 					<div class="form_item">
@@ -211,7 +227,8 @@
 							name="objectiveA" class="normal_select">
 							<option value="年龄">年龄</option>
 							<option value="教育">教育</option>
-							<option value="技能">技能</option>
+							<option value="技能(职称)">技能(职称)</option>
+							<option value="技能(职业资格)">技能(职业资格)</option>
 							<option value="住房">住房</option>
 							<option value="社保">社保</option>
 							<option value="落户地区">落户地区</option>
@@ -262,7 +279,8 @@
 							name="objectiveB" class="normal_select">
 							<option value="年龄">年龄</option>
 							<option value="教育">教育</option>
-							<option value="技能">技能</option>
+							<option value="技能(职称)">技能(职称)</option>
+							<option value="技能(职业资格)">技能(职业资格)</option>
 							<option value="住房">住房</option>
 							<option value="社保">社保</option>
 							<option value="落户地区">落户地区</option>
@@ -312,7 +330,8 @@
 							name="objectiveC" class="normal_select">
 							<option value="年龄">年龄</option>
 							<option value="教育">教育</option>
-							<option value="技能">技能</option>
+							<option value="技能(职称)">技能(职称)</option>
+							<option value="技能(职业资格)">技能(职业资格)</option>
 							<option value="住房">住房</option>
 							<option value="社保">社保</option>
 							<option value="落户地区">落户地区</option>
@@ -362,7 +381,8 @@
 							name="objectiveD" class="normal_select">
 							<option value="年龄">年龄</option>
 							<option value="教育">教育</option>
-							<option value="技能">技能</option>
+							<option value="技能(职称)">技能(职称)</option>
+							<option value="技能(职业资格)">技能(职业资格)</option>
 							<option value="住房">住房</option>
 							<option value="社保">社保</option>
 							<option value="落户地区">落户地区</option>
@@ -386,6 +406,110 @@
 					<div class="form_item">
 						<label class="normal_label">选项D提示文字:</label> <input type="text"
 							name="hintD" class="normal_input" value="${question.hintD}" />
+					</div>
+				</div>
+				
+				<div>
+					<div class="form_item">
+						<label class="normal_label">激活选项E:</label> <input type="checkbox"
+							name="activationE" class="normal_checkbox" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项E内容:</label> <input type="text"
+							name="choiceE" class="normal_input" value="${question.choiceE}" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项E转向</label>
+						<s:select name="gotoE" cssClass="normal_select" list="gotoList"
+							listKey="id" listValue="id">
+						</s:select>
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项E分数</label> <input type="text"
+							name="scoreE" class="normal_input" value="${question.scoreE}" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项E分数所属:</label> <select
+							name="objectiveE" class="normal_select">
+							<option value="年龄">年龄</option>
+							<option value="教育">教育</option>
+							<option value="技能(职称)">技能(职称)</option>
+							<option value="技能(职业资格)">技能(职业资格)</option>
+							<option value="住房">住房</option>
+							<option value="社保">社保</option>
+							<option value="落户地区">落户地区</option>
+							<option value="职业">职业</option>
+							<option value="投资纳税">投资纳税</option>
+							<option value="奖项荣誉">奖项荣誉</option>
+							<option value="婚姻状况">婚姻状况</option>
+							<option value="工作年限">工作年限</option>
+							<option value="工作年限">守法诚信</option>
+						</select>
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项E所需文件:</label> <input type="text"
+							name="fileE" class="normal_input" value="${question.fileE}" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项E所属部门:</label> <input type="text"
+							name="departmentE" class="normal_input"
+							value="${question.departmentE}" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项E提示文字:</label> <input type="text"
+							name="hintE" class="normal_input" value="${question.hintE}" />
+					</div>
+				</div>
+				
+				<div>
+					<div class="form_item">
+						<label class="normal_label">激活选项F:</label> <input type="checkbox"
+							name="activationF" class="normal_checkbox" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项F内容:</label> <input type="text"
+							name="choiceF" class="normal_input" value="${question.choiceF}" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项F转向</label>
+						<s:select name="gotoF" cssClass="normal_select" list="gotoList"
+							listKey="id" listValue="id">
+						</s:select>
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项F分数</label> <input type="text"
+							name="scoreF" class="normal_input" value="${question.scoreF}" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项F分数所属:</label> <select
+							name="objectiveF" class="normal_select">
+							<option value="年龄">年龄</option>
+							<option value="教育">教育</option>
+							<option value="技能(职称)">技能(职称)</option>
+							<option value="技能(职业资格)">技能(职业资格)</option>
+							<option value="住房">住房</option>
+							<option value="社保">社保</option>
+							<option value="落户地区">落户地区</option>
+							<option value="职业">职业</option>
+							<option value="投资纳税">投资纳税</option>
+							<option value="奖项荣誉">奖项荣誉</option>
+							<option value="婚姻状况">婚姻状况</option>
+							<option value="工作年限">工作年限</option>
+							<option value="工作年限">守法诚信</option>
+						</select>
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项F所需文件:</label> <input type="text"
+							name="fileF" class="normal_input" value="${question.fileF}" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项F所属部门:</label> <input type="text"
+							name="departmentF" class="normal_input"
+							value="${question.departmentF}" />
+					</div>
+					<div class="form_item">
+						<label class="normal_label">选项F提示文字:</label> <input type="text"
+							name="hintF" class="normal_input" value="${question.hintF}" />
 					</div>
 				</div>
 			</div>
