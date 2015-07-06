@@ -20,6 +20,7 @@
 		 <mapping resource="com\hyd\northpj\entity\Question.hbm.xml" />
 		 <mapping resource="com\hyd\northpj\entity\AdminUser.hbm.xml" />
 		 <mapping resource="com\hyd\northpj\entity\Answer.hbm.xml" />
+		 <mapping resource="com\hyd\northpj\entity\Material.hbm.xml" />
 		
 	</session-factory>
  

@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 
 import com.hyd.northpj.entity.AdminUser;
 import com.hyd.northpj.entity.Answer;
+import com.hyd.northpj.entity.Material;
 import com.hyd.northpj.entity.Question;
 import com.hyd.northpj.entity.User;
 
@@ -153,6 +154,35 @@ public class ValidateUtil {
 		return 0;
 	}
 
+	/**
+	 * 验证用户所有属性的安全性
+	 * 
+	 * @param loginUser
+	 * @return 返回验证结果，1-->未通过验证，0-->通过验证
+	 * @throws SecurityException
+	 * @throws ClassNotFoundException
+	 * @throws IllegalArgumentException
+	 * @throws IllegalAccessException
+	 */
+	public static int validateMaterialAllProperty(Material material)
+			throws SecurityException, ClassNotFoundException,
+			IllegalArgumentException, IllegalAccessException {
+
+		Field[] fds = Class.forName("com.hyd.northpj.entity.User")
+				.getDeclaredFields();
+
+		for (int i = 0; i < fds.length; i++) {
+			fds[i].setAccessible(true);
+			Object userProperty = fds[i].get(material);
+			if (userProperty != null) {
+				if (!isPassSqlFilter(userProperty.toString())) {
+					return 1;
+				}
+			}
+		}
+		return 0;
+	}
+	
 	public static int validateQuestionAllProperty(Question question)
 			throws SecurityException, ClassNotFoundException,
 			IllegalArgumentException, IllegalAccessException {
