@@ -16,6 +16,7 @@ public class AdminQuestionListAction extends ActionSupport {
 	private String questionType;
 	@Override
 	public String execute() throws Exception {
+
 		if(questionType!=null){
 		switch(questionType)
 
@@ -26,10 +27,9 @@ public class AdminQuestionListAction extends ActionSupport {
 		break;
 
 		}
-		System.out.println(questionType);
 		}
 		QuestionService questionService = new QuestionService();
-		List<Question> questionList = questionService.getQuestionList();
+		List<Question> questionList = questionService.getQuestionList(questionType);
 		CommonUtil.toBeJson(questionList, questionList.size());
 
 		return null;
