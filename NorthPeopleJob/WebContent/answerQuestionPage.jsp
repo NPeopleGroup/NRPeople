@@ -14,7 +14,6 @@
 			winHeight = window.innerHeight;
 			/* 			$(".question-box").css("margin-top",
 			 (winHeight - 70 - 150 - 452) / 3); */
-			$(".question-box").css("margin-top", 10);
 			$(".question-box").css("margin-bottom",
 					(winHeight - 70 - 150 - 452) / 3 * 2);
 		}
@@ -28,7 +27,10 @@
 		case "教育":
 			$(".question-box-line-fill").css("width", "120");
 			break;
-		case "技能":
+		case "技能(职业资格)":
+			$(".question-box-line-fill").css("width", "180");
+			break;
+		case "技能(职称)":
 			$(".question-box-line-fill").css("width", "180");
 			break;
 		case "住房":
@@ -87,19 +89,21 @@
 		<input type="text" name="id" value="${question.id}"
 			style="display: none" />
 		<div style="width: 990px; margin: 0 auto;">
-			<div class="type-box">年&nbsp;&nbsp;&nbsp;&nbsp;龄</div>
-			<div class="type-box">教&nbsp;&nbsp;&nbsp;&nbsp;育</div>
-			<div class="type-box">技&nbsp;&nbsp;&nbsp;&nbsp;能</div>
-			<div class="type-box">住&nbsp;&nbsp;&nbsp;&nbsp;房</div>
-			<div class="type-box">社&nbsp;&nbsp;&nbsp;&nbsp;保</div>
-			<div class="type-box">落户地区</div>
-			<div class="type-box">职&nbsp;&nbsp;&nbsp;&nbsp;业</div>
-			<div class="type-box">投资纳税</div>
-			<div class="type-box">奖项荣誉</div>
-			<div class="type-box">婚姻状况</div>
-			<div class="type-box">工作年限</div>
-
-			<div class="type-box">守法诚信</div>
+			<div style="width: 170px; float: left;">
+				<div class="type-box">年龄</div>
+				<div class="type-box">教育</div>
+				<div class="type-box">技能(职业资格)</div>
+				<div class="type-box">技能(职称)</div>
+				<div class="type-box">住房</div>
+				<div class="type-box">社保</div>
+				<div class="type-box">落户地区</div>
+				<div class="type-box">职业</div>
+				<div class="type-box">投资纳税</div>
+				<div class="type-box">奖项荣誉</div>
+				<div class="type-box">婚姻状况</div>
+				<div class="type-box">工作年限</div>
+				<div class="type-box">守法诚信</div>
+			</div>
 			<div class="question-box">
 				<div class="question-box-title">天津市积分落户自助测评</div>
 				<div class="question-box-line">
