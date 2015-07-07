@@ -26,6 +26,42 @@ public class AdminQuestionListAction extends ActionSupport {
 			case "age":
 				setQuestionType("年龄");
 				break;
+			case "education":
+				setQuestionType("教育");
+				break;
+			case "skills_title":
+				setQuestionType("技能(职称)");
+				break;
+			case "skills_qualifications":
+				setQuestionType("技能(职业资格)");
+				break;
+			case "housing":
+				setQuestionType("住房");
+				break;
+			case "security":
+				setQuestionType("社保");
+				break;
+			case "settled_area":
+				setQuestionType("落户地区");
+				break;
+			case "career":
+				setQuestionType("职业");
+				break;
+			case "investment_tax":
+				setQuestionType("投资纳税");
+				break;
+			case "awards_honor":
+				setQuestionType("奖项荣誉");
+				break;
+			case "marital_status":
+				setQuestionType("婚姻状况");
+				break;
+			case "working_years":
+				setQuestionType("工作年限");
+				break;
+			case "law_integrity":
+				setQuestionType("守法诚信");
+				break;
 
 			default:
 				setQuestionType("年龄");
